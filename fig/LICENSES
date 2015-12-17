@@ -1,0 +1,11 @@
+java_logo.svg:
+- source: https://fr.wikipedia.org/wiki/Java_%28langage%29#/media/File:Java_Logo.svg
+- owner: Oracle Corporation
+- license: Trademark, this is a logo of an item protected by copyright
+
+python_logo.svg:
+- source: https://fr.wikipedia.org/wiki/Python_%28langage%29#/media/File:Python_logo_and_wordmark.svg
+          https://www.python.org/community/logos/
+- owner: Python Software Foundation (PSF)
+- license: https://www.python.org/psf/trademarks
+
