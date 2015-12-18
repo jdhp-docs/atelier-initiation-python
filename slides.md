@@ -356,6 +356,288 @@ class: center, middle, inverse
 
 ---
 
+class: center, middle
+
+### Suspense...
+
+Je garde ça pour la fin !
+
+???
+
+En attendant, place à la pratique
+
+---
+
+name: ide
+class: center, middle, inverse
+
+## Présentation de l'environnement de programmation Python
+
+L'interprète Python et l'environnement de développement IDLE
+
+---
+
+### L'environnement de programmation Python
+
+...
+
+---
+
+### Installation de Python
+
+...
+
+[www.python.org](http://www.python.org)
+
+---
+
+### Alternative: les distributions
+
+Qu'est-ce que c'est ?
+
+Pourquoi utiliser une distribution ?
+
+Quelques exemples de distributions Python:
+* [Anaconda](https://www.continuum.io/)
+* [Enthought Canopy](https://www.enthought.com/)
+* [Python(x,y)](http://python-xy.github.io/)
+* [ActivePython](http://www.activestate.com/activepython)
+
+---
+
+### Installer Anaconda (ou Miniconda)
+
+...
+
+[www.continuum.io](https://www.continuum.io/)
+
+---
+
+### L'interprète python
+
+* utilisation de l'interprète interactif (windows, linux, mac)
+* execution d'un programme Python écrit dans un fichier
+    - via la ligne de commande
+    - depuis l'interface graphique du système (double clic...)
+
+---
+
+### L'environnement de développement IDLE
+
+* présentation: IDE "officiel" de Python, écrit en Python, open source, ... pourquoi IDLE?: 
+* installation
+* appel
+* interprète interactif
+* éditeur: nouveau/ouvrir, enregistrer, executer
+
+Si IDLE ne vous plait pas (personnellement je ne m'en sert pas, j'utilise un
+éditeur de texte généraliste (vim) + ipython à la place), il en existe plein
+d'autres: notepad++, codeblocks, etc.
+
+* [PyCharm](http://www.jetbrains.com/pycharm/)
+* [Spyder](https://github.com/spyder-ide/spyder/)
+
+https://en.wikipedia.org/wiki/Comparison_of_integrated_development_environments#Python
+
+---
+
+### Avant de commencer
+
+Quelques liens utiles (pages web à ajouter à vos favoris):
+* [https://docs.python.org/3/library/index.html](https://docs.python.org/3/library/index.html) (celui là est indispensable!)
+* [https://docs.python.org/3/tutorial/index.html](https://docs.python.org/3/tutorial/index.html)
+* [https://docs.python.org/3/reference/index.html](https://docs.python.org/3/reference/index.html)
+* [https://docs.python.org/3/glossary.html](https://docs.python.org/3/glossary.html)
+
+---
+
+### "The Zen of Python"
+
+```
+>>> import this
+The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!
+```
+
+???
+
+TODO: supprimer ?
+
+Il y a un "easter egg" dans Python,
+quand on tape `import this` dans l'interprète,
+quelques unes des bonnes pratiques de base de Python sont rappelées.
+
+C'est amusant mais c'est plus anecdotique qu'autre chose...
+
+---
+
+name: variables-types
+class: center, middle, inverse
+
+## Variables et types de base
+
+---
+
+### Qu'est-ce qu'une variable ?
+
+...
+
+---
+
+### Affecter une valeur à une variable
+
+...
+
+---
+
+### Afficher la valeur d'une variable
+
+...
+
+---
+
+name: fonctions-utiles
+class: center, middle, inverse
+
+## Quelques fonctions utiles
+
+---
+
+### print()
+
+...
+
+---
+
+### help()
+
+...
+
+---
+
+### dir()
+
+...
+
+---
+
+name: operateurs
+class: center, middle, inverse
+
+## Les opérateurs logiques et arithmétiques
+
+---
+
+### ...
+
+...
+
+---
+
+name: strustures-de-donnees
+class: center, middle, inverse
+
+## Les structures de données
+
+---
+
+### Les listes
+
+...
+
+---
+
+### Les dictionnaires
+
+...
+
+---
+
+### Les ensembles
+
+...
+
+---
+
+name: structures-de-controle
+class: center, middle, inverse
+
+## Les structures de controle
+
+---
+
+### If/Then/Else
+
+...
+
+---
+
+### Boucles For
+
+...
+
+---
+
+### Boucles While
+
+...
+
+---
+
+name: fonctions
+class: center, middle, inverse
+
+## Les fonctions
+
+---
+
+### ...
+
+...
+
+---
+
+name: modules
+class: center, middle, inverse
+
+## Les modules
+
+---
+
+### ...
+
+...
+
+---
+
+name: points-forts
+class: center, middle, inverse
+
+## Pourquoi utiliser Python ?
+
+15 bonnes raisons d'utiliser Python
+
+---
+
 ### Une syntaxe légère, efficace et agréable à lire 
 
 * Une syntaxe discrète
@@ -670,7 +952,7 @@ On est bien content d'utiliser Python quand on a affaire à des structures imbri
 
 ### Un langage multi-plateforme
 
-Permet d'écrire des portable portables:
+Permet d'écrire des logiciels portables:
 * Pas besoin de créer une version spécifique de votre programme pour chaque systèmes d'exploitation
 
 * Il marchera sans modification (à quelques rares exceptions près) sur:
@@ -939,268 +1221,14 @@ Montrer un exemple de code documenté et le résultat sur sphinx
 
 ---
 
-name: ide
+name: points-forts
 class: center, middle, inverse
 
-## Présentation de l'environnement de programmation Python
+### Et pour finir, un avant gout du potentiel de Python
 
-L'interprète Python et l'environnement de développement IDLE
-
----
-
-### L'environnement de programmation Python
-
-...
+... avec des exemples concrets !
 
 ---
-
-### Installation de Python
-
-...
-
-[www.python.org](http://www.python.org)
-
----
-
-### Alternative: les distributions
-
-Qu'est-ce que c'est ?
-
-Pourquoi utiliser une distribution ?
-
-Quelques exemples de distributions Python:
-* [Anaconda](https://www.continuum.io/)
-* [Enthought Canopy](https://www.enthought.com/)
-* [Python(x,y)](http://python-xy.github.io/)
-* [ActivePython](http://www.activestate.com/activepython)
-
----
-
-### Installer Anaconda (ou Miniconda)
-
-...
-
-[www.continuum.io](https://www.continuum.io/)
-
----
-
-### L'interprète python
-
-* utilisation de l'interprète interactif (windows, linux, mac)
-* execution d'un programme Python écrit dans un fichier
-    - via la ligne de commande
-    - depuis l'interface graphique du système (double clic...)
-
----
-
-### L'environnement de développement IDLE
-
-* présentation: IDE "officiel" de Python, écrit en Python, open source, ... pourquoi IDLE?: 
-* installation
-* appel
-* interprète interactif
-* éditeur: nouveau/ouvrir, enregistrer, executer
-
-Si IDLE ne vous plait pas (personnellement je ne m'en sert pas, j'utilise un
-éditeur de texte généraliste (vim) + ipython à la place), il en existe plein
-d'autres: notepad++, codeblocks, etc.
-
-* [PyCharm](http://www.jetbrains.com/pycharm/)
-* [Spyder](https://github.com/spyder-ide/spyder/)
-
-https://en.wikipedia.org/wiki/Comparison_of_integrated_development_environments#Python
-
----
-
-### Avant de commencer
-
-Quelques liens utiles (pages web à ajouter à vos favoris):
-* [https://docs.python.org/3/library/index.html](https://docs.python.org/3/library/index.html) (celui là est indispensable!)
-* [https://docs.python.org/3/tutorial/index.html](https://docs.python.org/3/tutorial/index.html)
-* [https://docs.python.org/3/reference/index.html](https://docs.python.org/3/reference/index.html)
-* [https://docs.python.org/3/glossary.html](https://docs.python.org/3/glossary.html)
-
----
-
-### "The Zen of Python"
-
-```
->>> import this
-The Zen of Python, by Tim Peters
-
-Beautiful is better than ugly.
-Explicit is better than implicit.
-Simple is better than complex.
-Complex is better than complicated.
-Flat is better than nested.
-Sparse is better than dense.
-Readability counts.
-Special cases aren't special enough to break the rules.
-Although practicality beats purity.
-Errors should never pass silently.
-Unless explicitly silenced.
-In the face of ambiguity, refuse the temptation to guess.
-There should be one-- and preferably only one --obvious way to do it.
-Although that way may not be obvious at first unless you're Dutch.
-Now is better than never.
-Although never is often better than *right* now.
-If the implementation is hard to explain, it's a bad idea.
-If the implementation is easy to explain, it may be a good idea.
-Namespaces are one honking great idea -- let's do more of those!
-```
-
-???
-
-TODO: supprimer ?
-
-Il y a un "easter egg" dans Python,
-quand on tape `import this` dans l'interprète,
-quelques unes des bonnes pratiques de base de Python sont rappelées.
-
-C'est amusant mais c'est plus anecdotique qu'autre chose...
-
----
-
-name: variables-types
-class: center, middle, inverse
-
-## Variables et types de base
-
----
-
-### Qu'est-ce qu'une variable ?
-
-...
-
----
-
-### Affecter une valeur à une variable
-
-...
-
----
-
-### Afficher la valeur d'une variable
-
-...
-
----
-
-name: fonctions-utiles
-class: center, middle, inverse
-
-## Quelques fonctions utiles
-
----
-
-### print()
-
-...
-
----
-
-### help()
-
-...
-
----
-
-### dir()
-
-...
-
----
-
-name: operateurs
-class: center, middle, inverse
-
-## Les opérateurs logiques et arithmétiques
-
----
-
-### ...
-
-...
-
----
-
-name: strustures-de-donnees
-class: center, middle, inverse
-
-## Les structures de données
-
----
-
-### Les listes
-
-...
-
----
-
-### Les dictionnaires
-
-...
-
----
-
-### Les ensembles
-
-...
-
----
-
-name: structures-de-controle
-class: center, middle, inverse
-
-## Les structures de controle
-
----
-
-### If/Then/Else
-
-...
-
----
-
-### Boucles For
-
-...
-
----
-
-### Boucles While
-
-...
-
----
-
-name: fonctions
-class: center, middle, inverse
-
-## Les fonctions
-
----
-
-### ...
-
-...
-
----
-
-name: modules
-class: center, middle, inverse
-
-## Les modules
-
----
-
-### ...
-
-...
-
----
-
-### Quelques snippets
 
 Télécharger mes *snippets* dans le répertoire "python" du projet [https://github.com/jeremiedecock/snippets](https://github.com/jeremiedecock/snippets)
 
