@@ -377,23 +377,64 @@ L'interprète Python et l'environnement de développement IDLE
 
 ---
 
-### L'environnement de programmation Python
+### Un aperçu de l'environnement (standard) de programmation Python [TODO]
 
-...
+* *Implémentation* standard (CPython)
+    - Interprète python standard (aussi appelé CPython)
+    - Bibliothèques standard
+    - IDE (éditeur) : IDLE
+    - Outils : pip, 2to3, etc.
+* Bibliothèques externes
+    - Numpy
+    - Matplotlib
+    - PyQt
+    - etc.
+* Interprètes/outils externes
+    - IPython
+    - Sphinx
+    - ...
+
+* http://enacit1.epfl.ch/introduction-python/outils-python.html
+* https://en.wikipedia.org/wiki/Python_%28programming_language%29#Implementations
+* https://docs.python.org/3.5/tutorial/interpreter.html
+* https://docs.python.org/3.5/using/windows.html
 
 ---
 
-### Installation de Python
+### Installation de Python : la méthode classique...
 
-...
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
-[www.python.org](http://www.python.org)
+.box[
+.center[[www.python.org](http://www.python.org)]
+]
 
 ---
 
-### Alternative: les distributions
+### Alternative : les distributions
 
 Qu'est-ce que c'est ?
+
+* Distribution Python: Anaconda, ...
+    * *Implémentation* standard (CPython)
+        - interprète python standard (aussi appelé CPython)
+        - outils : pip, 2to3, etc.
+        - bibliothèques standard
+        - IDE (éditeur) : IDLE
+    * Bibliothèques externes
+        - Numpy
+        - Matplotlib
+        - PyQt
+        - ...
+    * IPython (ne pas en parler ???)
+        - un interprète amélioré
 
 Pourquoi utiliser une distribution ?
 
@@ -408,6 +449,8 @@ Quelques exemples de distributions Python:
 ### Installer Anaconda (ou Miniconda)
 
 ...
+
+TODO: télécharger Anaconda et le mettre sur le serveur de fichier du Volab pour éviter d'attendre 1h que tt le monde télécharge les 600Mo du paquet le jour de l'atelier...
 
 [www.continuum.io](https://www.continuum.io/)
 
