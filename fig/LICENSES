@@ -9,3 +9,7 @@ python_logo.svg:
 - owner: Python Software Foundation (PSF)
 - license: https://www.python.org/psf/trademarks
 
+environnement-python.png:
+- source: http://enacit1.epfl.ch/introduction-python/outils-python.html
+- owner: Jean-Daniel Bonjour
+- license: CC-BY-SA
