@@ -106,27 +106,28 @@ Et enfin, je vais essayé de vous convaincre des nombreuses qualités de ce lang
     ## Plan
 ]
 .right-column[
-Première partie: Une présentation générale
-* [Présentation du langage Python](#presentation)
-    - histoire et particularités
-* [Pourquoi utiliser Python ?](#points-forts)
+1ère PARTIE: Une présentation générale
+* [Présentation du langage Python](#presentation): histoire, ...
 * [Présentation de l'environnement de programmation](#ide)
 
-Deuxième partie: On passe à la pratique
-* Variables et types de base
-* Quelques fonctions utiles
-    - print(), help(), dir()
-* Les opérateurs logiques et arithmétiques
-* Les structures de données
-    - listes, dictionnaire, ensembles
-    - le "slicing"
-* Les structures de contrôle
-    - if/then/else, boucles for et boucles while
-* Les fonctions
-* Les modules
+2e PARTIE: On passe à la pratique
+* [Variables et types de base](#variables-types)
+* [Quelques fonctions utiles](#fonctions-utiles): print(), help(), dir(), ...
+* [Les commentaires](#commentaires)
+* [Les opérateurs logiques et arithmétiques](#operateurs)
+* [Les structures de données](#strustures-de-donnees): listes, dictionnaire, ...
+* [Les structures de contrôle](#structures-de-controle): if/then/else, boucles
+* [Les fonctions](#fonctions)
+* [Les modules](#modules)
 
-Troisième partie: Quelques exemples de codes
+3e PARTIE: Pour patienter jusqu'au prochain atelier...
+* [Pourquoi utiliser Python ?](#points-forts)
+* [Quelques demos](#snippets)
 ]
+
+???
+
+* Présentation du langage Python: histoire et particularités
 
 ---
 
@@ -360,10 +361,9 @@ Il existe des outils pour automatiser la conversion des programmes de Python 2
 
 ---
 
-name: points-forts
-class: center, middle, inverse
+class: center, middle
 
-## Pourquoi utiliser Python ?
+## Mais au fait, pourquoi Python et pas C/C++/Java/... ?
 
 15 bonnes raisons d'utiliser Python
 
@@ -637,6 +637,24 @@ type
 x = 3
 ```
 
+Règles de nommage
+* .todo[...]
+
+OK
+```python
+x = 3
+AbC = 3
+une_variable = 3
+une-variable = 3
+```
+
+Pas OK
+```python
+supervariable! = 3
+```
+
+.todo[conventions, ...]
+
 ---
 
 ### Le type d'une variable
@@ -649,7 +667,7 @@ var = 5
 var = -179756579879372368792803
 ```
 
-Les .red[nombres décimaux]
+Les .red[nombres décimaux] (notation anglaise!)
 ```python
 var = 31.141592
 var = -0.162
@@ -671,14 +689,23 @@ var = False
 
 Le type : ce qui caractérise la valeur d'une variable
 
+Les .red[nombres décimaux] : notation anglaise = `.` et non pas `,`
+
 Booléens = seulement deux valeurs : "vrai" ou "faux"
 
 ---
 
 Les chaînes de caractères sont internationalisées ("Unicode")
 ```python
-var = "你好 !"
+var = "你好"
 var = "العربية"
+```
+
+Elles peuvent contenir des caractères de ponctuation et des caractères spéciaux
+```python
+var = "Hello\nWorld!"
+var = "http://www.jdhp.org"
+var = "jd.jdhp@gmail.com"
 ```
 
 ???
@@ -687,7 +714,7 @@ Les chaînes de caractère ne sont pas limitées aux caractères latin (ASCII)
 
 ---
 
-### Afficher la valeur d'une variable
+### Afficher la valeur d'une variable: la fonction `print()`
 
 ```python
 x = 3
@@ -701,8 +728,9 @@ print(var)
 
 ---
 
-### Afficher le type d'une variable
+### Afficher le type d'une variable: la fonction `type()`
 
+Chaîne de caractères: `str`
 ```python
 s = "Bonjour"
 
@@ -710,6 +738,7 @@ print(s)
 print(type(s))
 ```
 
+Nombres entiers: `int`
 ```python
 n = 123
 
@@ -717,11 +746,22 @@ print(n)
 print(type(n))
 ```
 
+Nombres décimaux: `float`
 ```python
 x = 0.1
 
 print(x)
 print(type(x))
+```
+
+---
+
+Booléens: `bool`
+```python
+b = True
+
+print(b)
+print(type(b))
 ```
 
 ---
@@ -921,7 +961,7 @@ print(dir(s))
 
 ---
 
-name: operateurs
+name: commentaires
 class: center, middle, inverse
 
 ## Les commentaires
@@ -961,9 +1001,156 @@ class: center, middle, inverse
 
 ---
 
-### ...
+### Opérateurs arithmétiques (nombres entiers et décimaux)
 
-...
+Adition, soustraction
+```python
+print(3 + 4)
+print(10.0 + 1.5)
+print(15 - 2)
+```
+
+```python
+n1 = 3
+n2 = 4
+
+print(n1 + n2)
+print(n1 - n2)
+```
+
+```python
+n1 = 3
+n2 = 4
+n3 = n1 + n2
+n4 = n1 - n2
+
+print(n3)
+print(n4)
+```
+
+---
+
+Conversions de types automatiques
+
+```python
+n1 = 3
+n2 = 0.1
+n3 = n1 + n2
+
+print(type(n1))
+print(type(n2))
+print(type(n3))
+```
+
+---
+
+Multiplication, division
+```python
+print(3 * 4)
+print(10.0 * 1.5)
+print(15 / 2)
+```
+
+```python
+n1 = 3
+n2 = 4
+
+print(n1 * n2)
+print(n1 / n2)
+```
+
+```python
+n1 = 3
+n2 = 4
+n3 = n1 * n2
+n4 = n1 / n2
+
+print(n3)
+print(n4)
+```
+
+---
+
+Conversions de types automatiques
+
+```python
+n1 = 3
+n2 = 4
+n3 = n1 / n2
+
+print(type(n1))
+print(type(n2))
+print(type(n3))
+```
+
+???
+
+Conversion automatiques:
+
+```python
+print(type(15 / 2))
+```
+
+---
+
+On peut enchaîner les oparateurs
+
+```python
+var = 3 + 4 - 2 + 0.1
+```
+
+Les parenthèses
+
+.todo[...]
+
+---
+
+### Opérateurs logiques (booléens)
+
+On en aura surtout besoin pour les tests de branchements (instruction `if`)
+
+Opérateur *ET* (`and`)
+```python
+print(True and True)
+print(True and False)
+print(False and True)
+print(False and False)
+```
+
+```python
+var1 = True
+var2 = False
+print(var1 and var2)
+```
+
+---
+
+Opérateur *OU* (`or`)
+```python
+print(True or True)
+print(True or False)
+print(False or True)
+print(False or False)
+```
+
+```python
+var1 = True
+var2 = False
+print(var1 ou var2)
+```
+
+---
+
+Opérateur *NON* (`not`)
+```python
+print(not True)
+print(not False)
+```
+
+```python
+var = True
+print(not var)
+```
 
 ---
 
@@ -1778,7 +1965,7 @@ Montrer un exemple de code documenté et le résultat sur sphinx
 
 ---
 
-name: points-forts
+name: snippets
 class: center, middle, inverse
 
 ### Et pour finir, un avant gout du potentiel de Python
@@ -1826,6 +2013,48 @@ Présentation des trucs cool (sans code) qu'on peut faire avec Python (distingue
 ???
 
 TODO: mettre ça autre part
+
+---
+
+## Et après ?
+
+* Les classes (POO)
+* Les exceptions
+* Approfondir les chaînes de caractères: format(), méthodes du type "string", ...
+* Approfondir la fonction print()
+* Lecture/écriture de fichiers
+* Les itérateurs et les générateurs
+* La "compréhension" de liste, de dictionnaire et d'ensmble
+* Les structures de données imbriquées, les slices, ...
+* La programmation modulaire: écrire des paquets/modules
+* Les fonctions annonymes
+* Les autres types: `bytes`, `bytearray`, `complex`, ...
+* Les autre fonctions internes ("build-in functions")
+    - `all()`, `any()`, `enumerate()`, `abs()`, `filter()`, `globals()`,
+      `hex()`, `id()`, `isinstance()`, `iter()`, `locals()`, `map()`, `max()`,
+      `min()`, `memoryview()`, `next()`, `pow()`, `property()`, `round()`,
+      `slice()`, `sorted()`, `reversed()`, `staticmethod()`, `sum()`,
+      `super()`, `vars()`, `zip()`, ...
+
+---
+
+## Sans oublier...
+
+* Quelques modules de la bibliothèque standard
+    - Mathématiques: `maths`
+    - Temps: `date` et `time`
+    - Nombres aléatoires: `random`
+    - Interfaces graphiques: `tkinter`
+    - Persistance de données: `json`, ...
+    - Opérations sur les fichirs: `os`, ...
+* Quelques bibliothèques externes
+    - RaspberryPi: PySerial, GPIO, ...
+    - Tracé de courbes: Matplotlib (+ Numpy)
+* Debugger: `pdb`
+* Tests unitaires
+* La documentation en ligne: docstrings, sphinx, ...
+* Distribuer vos logiciels: setuptools, pip, PyPI, ...
+* Outils: pylint, pyreverse, ...
 
 ---
 
