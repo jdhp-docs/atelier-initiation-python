@@ -796,37 +796,83 @@ class: center, middle, inverse
 
 ### Qu'est-ce qu'une variable ?
 
-.todo[...]
+C'est un espace de stockage dans la mémoire de l'ordinateur (une "case") caractérisé par:
+* Un nom: qu'on utilise pour désigner la variable dans le programme
+    - Exemples: "var", "x", "toto", ...
+* Une valeur: le contenu de la variable
+* Un type: on verra ça juste après
+* Une portée: on verra ça plus tard...
 
-nom
-valeure
-type
+Un programme utilise des variables pour stocker des données temporaires.
 
 ---
 
 ### Affecter une valeur à une variable
 
+Exemple:
 ```python
 x = 3
+y = 18
 ```
 
-Règles de nommage
-* .todo[...]
+* `x` est le nom de la 1ère variable et `3` sa valeur
+* `y` est le nom de la 2e variable et `18` sa valeur
 
-OK
+---
+
+#### Règles de nommage
+
+Les noms de variables doivent obéir à certaines règles:
+* les lettres de `a` à `z` en minuscule ou en majuscule
+* le caractère "underscore" : `_`
+* les chiffres (mais un nom de variable ne doit pas commencer par un chiffre)
+
+Exemples de noms corrects:
 ```python
 x = 3
 AbC = 3
+x8 = 3
 une_variable = 3
+```
+
+Exemples de noms incorrects:
+```python
+une variable = 7
+supervariable! = 19
+8x = 19
 une-variable = 3
 ```
 
-Pas OK
+???
+
+.comment[https://docs.python.org/3/reference/lexical_analysis.html#identifiers]
+
+---
+
+#### Conventions de nommage
+
+En plus des règles précédentes, il existe des conventions (i.e. pas
+obligatoires mais recommandées)
+
+.box[
+.center[Voir les [PEP 8](https://www.python.org/dev/peps/pep-0008/)]
+]
+
+Pour les noms de variables:
+* éviter d'utiliser des lettres en majuscule (les noms avec des majuscules sont
+  réservés à autre chose)
+* utiliser le caractère underscore (`_`) pour les noms composés
+
+Exemple:
+
 ```python
-supervariable! = 3
+nom_etudiant = "John"
+nom_prof = "Alice"
 ```
 
-.todo[conventions, ...]
+???
+
+.comment[https://www.python.org/dev/peps/pep-0008/]
 
 ---
 
