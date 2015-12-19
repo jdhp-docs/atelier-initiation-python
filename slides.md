@@ -163,7 +163,8 @@ Histoire et particularités
         - Windows, MacOS, Linux
         - La plupart des systèmes Unix
         - Et même sur Android!
-* .red[Open source]: le langage et son implémentation de référence (interprète, bibliothèque standard et outils annexes)
+* .red[Open source]: le langage et son implémentation de référence (interprète,
+  bibliothèque standard et outils annexes)
     - Gratuit, c'est pas le cas de tous les langages:
         - Matlab, Mathematica, IDL, etc.
         - Les licences de ces langages peuvent coûter plusieurs miliers d'euros!
@@ -172,7 +173,8 @@ Histoire et particularités
     - Vous pouvez regarder la mécanique interne de l'interprète Python et des
       outils qui l'accompagne si le cœur vous en dit
 * .red[Très utilisé] dans l'industrie et le monde académique
-    - Notamment il a de sérieux atouts pour séduire les ingénieurs et les scientifiques
+    - Notamment il a de sérieux atouts pour séduire les ingénieurs et les
+      scientifiques
 
 ---
 
@@ -186,7 +188,7 @@ Python est un langage:
     - Système de gestion d'exceptions
     - ...
 * À .red[*typage dynamique*]
-    - Le programmeur de défini pas explicitement le type des variables
+    - Le programmeur ne défini pas explicitement le type des variables
 
 ???
 
@@ -337,7 +339,7 @@ utiliser Python 2 plutôt que Python 3.
 
 1. Quelques outils et bibliothèques utilisées par ces développeurs n'ont toujours pas été mises à jours pour Python 3
 2. De nombreuses innovations de Python 3.X sont de toute façon portées dans Python 2.7
-3. Manque de le temps, de moyens ou de motivation de porter certains projets
+3. Manque de temps, de moyens ou de motivation de porter certains projets
 
 .center[<img src="fig-nonfree/python-survey-2014-prevent-upgrade.png" width="500">]
 
@@ -402,7 +404,7 @@ Qu'est-ce que j'entends par ".red[environnement Python]" ?
 
 * *Implémentation* standard (CPython)
     - Un ***interprète*** python standard (aussi appelé CPython)
-    - Une ***bibliothèques standard***
+    - Une ***bibliothèque standard***
     - Un éditeur pour écrire vos programmes : IDLE
     - Divers outils : pip, 2to3, ...
 
@@ -466,7 +468,7 @@ Qu'est-ce que c'est ?
 * *Implémentation* standard (CPython)
 
     - Un ***interprète*** python standard (aussi appelé CPython)
-    - Une ***bibliothèques standard***
+    - Une ***bibliothèque standard***
     - Un éditeur pour écrire vos programmes : IDLE
     - Divers outils : pip, 2to3, ...
 
@@ -494,7 +496,7 @@ Qu'est-ce que c'est ?
 * *Implémentation* standard (CPython)
 
     - Un ***interprète*** python standard (aussi appelé CPython)
-    - Une ***bibliothèques standard***
+    - Une ***bibliothèque standard***
     - Un éditeur pour écrire vos programmes : IDLE
     - Divers outils : pip, 2to3, ...
 
@@ -564,7 +566,7 @@ préinstallées ou facilement installables avec les distributions.]
 
 ### Anaconda et Miniconda
 
-Anaconda et Miniconda contienent:
+Anaconda et Miniconda contiennent:
 * Des .red[bibliothèques externes] qui ne sont pas disponibles sur PyPI:
     - Numpy
     - PyQt
@@ -599,7 +601,7 @@ On va installer Anaconda.
 
 Une des distribution Python les plus connues est les plus réputées.
 
-.red[**Qui parmi vous utilise autre chose que Windows ?**]
+.red[**Vous utilisez tous Windows ?**]
 
 .todo[télécharger Anaconda et le mettre sur le serveur de fichier du Volab pour éviter d'attendre 1h que tt le monde télécharge les 600Mo du paquet le jour de l'atelier...]
 .todo[imprimer le cheatcode conda, tester l'install et l'appel de conda sur Windows]
@@ -612,14 +614,16 @@ Une des distribution Python les plus connues est les plus réputées.
 
 * Lancer l'interprète Python depuis un terminal
 
-    - Windows: `py test.py` .todo[check]
-    - MacOSX, Linux, Unix: `python3 test.py`
+    - Windows: `python`
+    - MacOSX, Linux, Unix: `python3`
 
 * Taper la ligne suivante dans l'interprète
 
 ```python
 print("hello")
 ```
+
+* Taper `Ctrl+d` pour quitter l'interprète
 
 ---
 
@@ -634,14 +638,15 @@ print("hello")
 
 * Exécuter le fichier depuis un terminal
 
-    - Windows: `py test.py`
+    - Windows: `py test.py` ou `python test.py`
     - MacOSX, Linux, Unix: `python3 test.py`
 
 ---
 
 #### Exécuter un fichier Python depuis l'explorateur de fichiers
 
-* Écrire le programme suivant dans un fichier appelé "test_graphique.py" avec votre éditeur de texte préféré
+* Écrire le programme suivant dans un fichier appelé "test_graphique.py" avec
+  votre éditeur de texte préféré
 
 ```python
 #!/usr/bin/env python3
@@ -656,10 +661,11 @@ label.pack()
 root.mainloop()
 ```
 
-* Double cliquer sur votre fichier "test_graphique.py" .todo[tester...]
+* Double cliquer sur votre fichier "test_graphique.py"
 
 .box[
-Remarque: il est peut être préférable d'appeler ce programme "test_graphique.pyw" sur Windows...
+**Remarque:** il est peut être préférable d'appeler ce programme
+"test_graphique.pyw" sur Windows pour ne pas ouvrir un terminal inutile...
 ]
 
 ---
@@ -676,14 +682,14 @@ Pourquoi IDLE ?
 * Un classique
 * Intégré de base avec Python: si vous avez Python, vous avez IDLE (sauf cas particuliers)
 * Fonctionne sur Windows, MacOSX, Linux, ...
-* Fonctionnalités basiques mais adaptés aux besoin de cet atelier
+* Fonctionnalités basiques mais adaptées aux besoins de cet atelier
     - Ni trop simple, ni trop compliqué
 
 ---
 
 #### Les alternatives à IDLE
 
-Si IDLE ne vous plait pas
+Si IDLE ne vous plaît pas
 
 * [PyCharm](http://www.jetbrains.com/pycharm/)
 * [Spyder](https://github.com/spyder-ide/spyder/)
@@ -707,15 +713,26 @@ Mais je trouve qu'il est bien adapté pour cet atelier.
 
 #### Écriture de programmes Python avec IDLE
 
-##### 1. Créer un nouveau programme
+##### 1. Démarrer IDLE
 
-* "File / New File" .comment[(Ctrl + n)]
+* Taper `idle` depuis une console
 
-Une nouvelle fenêtre apparait : l'éditeur de code Python
+???
+
+À l'ouverture d'IDLE vous avec une console (Shell) pour interagir directement
+avec l'interprète Python
 
 --
 
-##### 2. Écrire notre programme
+##### 2. Créer un nouveau programme
+
+* "File / New File" .comment[(Ctrl + n)]
+
+Une nouvelle fenêtre apparaît : l'éditeur de code Python
+
+--
+
+##### 3. Écrire notre programme
 
 Écrire le programme suivant dans la fenêtre d'édition
 
@@ -725,30 +742,26 @@ print("hello")
 
 --
 
-##### 3. Sauvegarder notre programme dans un fichier Python (.py)
+##### 4. Sauvegarder notre programme dans un fichier Python (.py)
 
 * "File / Save" .comment[(Ctrl + s)]
 
---
+---
 
-##### 4. Exécuter notre programme
+##### 5. Exécuter notre programme
 
 * "Run / Run module" .comment[(F5)]
 
 Le résultat est affiché dans la console IDLE ("Shell")
 
-???
+--
 
-À l'ouverture d'IDLE vous avec une console (Shell) pour interagir directement
-avec l'interprète Python
+##### Et bien sûr...
 
----
+Vous pouvez exécuter notre programme depuis une console du système ou depuis
+l'explorateur de fichiers
 
-class: center, middle
-
-#### Exécuter notre protramme depuis une console du système ou depuis l'explorateur de fichiers
-
-Comme pour les exercices précèdents...
+Comme dans les exemples précédents...
 
 ???
 
@@ -785,6 +798,13 @@ Ou depuis le menu: "Run / Python Shell"
 print("hello")
 ```
 
+--
+
+.box[
+**Astuce :** pour copier coller plus vite dans la console IDLE, sélectionnez le
+texte et appuyez sur la touche `Entrer`
+]
+
 ---
 
 name: variables-types
@@ -797,13 +817,13 @@ class: center, middle, inverse
 ### Qu'est-ce qu'une variable ?
 
 C'est un espace de stockage dans la mémoire de l'ordinateur (une "case") caractérisé par:
-* Un nom: qu'on utilise pour désigner la variable dans le programme
+* Un .red[nom]: qu'on utilise pour désigner la variable dans le programme
     - Exemples: "var", "x", "toto", ...
-* Une valeur: le contenu de la variable
-* Un type: on verra ça juste après
-* Une portée: on verra ça plus tard...
+* Une .red[valeur]: le contenu de la variable
+* Un .red[type]: on verra ça juste après
+* Une .red[portée]: on verra ça plus tard...
 
-Un programme utilise des variables pour stocker des données temporaires.
+Un programme utilise des variables pour stocker des données temporaires
 
 ---
 
@@ -1011,12 +1031,26 @@ print(type(var))
 
 ### Les conversions de type
 
-...
+On peut modifier le type d'une valeur ou d'une variable
+avec les fonctions `int()`, `float()` et `str()`
 
-int()
-float()
-str()
-bool()
+```python
+x = 1
+
+x = str(x)
+print(x)
+print(type(x))
+
+x = int(x)
+print(x)
+print(type(x))
+
+x = float(x)
+print(x)
+print(type(x))
+```
+
+Il existe aussi une fonction de conversion pour les booléens: `bool()`
 
 ---
 
@@ -1027,7 +1061,7 @@ class: center, middle, inverse
 
 ---
 
-### Qu'est-ce qu'une fonction ?
+### Mais au fait, c'est quoi une fonction ?
 
 * Un nom suivi de parenthèses
 
@@ -1158,7 +1192,7 @@ help(type)
 
 ### La fonction dir()
 
-Afficher la liste de toutes les *objets* instanciées
+Afficher la liste de tous les *objets* instanciés
 
 ```python
 s = "Bonjour"
@@ -1223,7 +1257,7 @@ class: center, middle, inverse
 
 ### Opérateurs arithmétiques (nombres entiers et décimaux)
 
-Adition, soustraction
+Addition, soustraction
 ```python
 print(3 + 4)
 print(10.0 + 1.5)
@@ -1313,15 +1347,70 @@ print(type(15 / 2))
 
 ---
 
-On peut enchaîner les oparateurs
+On peut enchaîner les opérateurs
 
 ```python
 var = 3 + 4 - 2 + 0.1
 ```
 
-Les parenthèses
+On peut mettre des parenthèses comme en maths
 
-.todo[...]
+```python
+var = 20 * (4 - 0.1)
+print(var)
+
+var = 20 * 4 - 0.1
+print(var)
+```
+
+???
+
+Suivant qu'on a ou pas les parenthèses, ça ne donne pas le même résultat (comme
+en maths)
+
+---
+
+### Opérateurs de comparaison
+
+* Opérateur "test d'égalité" (`==`)
+
+```python
+var1 = 10
+var2 = 5
+
+print(var1 == var2)
+```
+
+--
+
+* Opérateur "test d'inégalité" (`!=`)
+
+```python
+var1 = 10
+var2 = 5
+
+print(var1 != var2)
+```
+
+---
+
+* Les autres opérateurs de comparaison (`<`, `>`, `<=` et `>=`)
+
+```python
+var1 = 10
+var2 = 5
+var3 = 5
+
+print(var1 < var2)
+
+print(var1 <= var2)
+print(var2 <= var3)
+
+print(var1 > var2)
+
+print(var1 >= var2)
+print(var2 >= var3)
+```
 
 ---
 
@@ -1338,9 +1427,8 @@ print(False and False)
 ```
 
 ```python
-var1 = True
-var2 = False
-print(var1 and var2)
+res = (3 < 0) and (1 > 0)
+print(res)
 ```
 
 ---
@@ -1354,9 +1442,8 @@ print(False or False)
 ```
 
 ```python
-var1 = True
-var2 = False
-print(var1 ou var2)
+res = (3 < 0) or (1 > 0)
+print(res)
 ```
 
 ---
@@ -1403,31 +1490,34 @@ class: center, middle, inverse
 
 ### Les listes
 
+<br />
+
+.box[
+.center[Une liste est une séquence de valeur]
+]
+
+Créer une liste initialisée
+```python
+l = ["Bonjour", 2.1, 3]
+```
+
 Créer une liste vide
 ```python
 l = []
 ```
 
-Ajouter un élément à la fin de la liste
+Ajouter des éléments à la fin de la liste
 ```python
 l.append(2)
 l.append("hello")
 l.append(3.14)
 ```
 
----
+???
 
-Créer une liste initialisée...
-```python
-l = ["Bonjour", 2.1, 3]
-```
+Se notre entre crochets
 
-et la compléter
-```python
-l.append(2)
-l.append("hello")
-l.append(3.14)
-```
+.blue[Dessiner au tableau...]
 
 ---
 
@@ -1482,6 +1572,10 @@ l = ["hello", "world"]
 len(l)
 ```
 
+???
+
+Pour simplifier les slides, je ne mets plus les "print()"
+
 ---
 
 Vérifier si un élément est dans une liste...
@@ -1515,8 +1609,6 @@ l2 = [3, 4]
 l1 + l2
 ```
 
----
-
 Trier une liste
 ```python
 l = [16, -2, 3, 0.1]
@@ -1533,26 +1625,76 @@ l.reverse()
 
 ### Les tuples
 
-...
+Créer un tuple initialisé...
+```python
+t = ("Bonjour", 2.1, 3)
+```
+
+Obtenir le 2e élément d'un tuple
+```python
+t[1]
+```
+
+Obtenir la taille d'un tuple
+```python
+l = (1, 2, 3)
+len(l)
+```
+
+Vérifier si un élément est dans un tuple...
+```python
+t = ("hello", "world")
+"bonjour" in t
+"hello" in t
+"world" not in t
+```
+
+???
+
+Un tuple c'est comme une liste sauf qu'on ne peut pas le modifier.
+
+L'intérêt est que ça prend moins de place en mémoire et que c'est plus rapide à manipuler.
+
+Se note entre parenthèses
+
+Mutable vs Imutable
 
 ---
 
-### Les ensembles
+Convertir un tuple en liste
+```python
+t = (1, 2, 3)
+l = list(t)
+```
 
-...
+Convertir une liste en tuple
+```python
+l = [1, 2, 3]
+t = tuple(l)
+```
 
 ---
 
-### Les dictionnaires
+class: center, middle
 
-...
+### Les autres structures de données
+
+Les *ensembles* et les *dictionnaires*... ça sera pour une autre fois :-)
+
+???
+
+Il y a au moins 2 autres types de structures de données à connaitre
+* les ensembles
+* les dictionnaires
+
+mais j'en parlerais pas cette fois ci, pour pas que l'atelier soit trop indigeste...
 
 ---
 
 name: structures-de-controle
 class: center, middle, inverse
 
-## Les structures de controle
+## Les structures de contrôle
 
 ---
 
@@ -2247,17 +2389,21 @@ TODO: mettre ça autre part
 
 ## Et après ?
 
+* Les autres structures de données: dictionnaires, ensembles, ...
 * Les classes (POO)
 * Les exceptions
-* Approfondir les chaînes de caractères: format(), méthodes du type "string", ...
+* Approfondir les chaînes de caractères:
+    - format(), méthodes du type "string", ...
 * Approfondir la fonction print()
 * Lecture/écriture de fichiers
 * Les itérateurs et les générateurs
 * La "compréhension" de liste, de dictionnaire et d'ensmble
-* Les structures de données imbriquées, les slices, ...
+* Les structures de données imbriquées
+* Les slices (pour les séquences)
 * La programmation modulaire: écrire des paquets/modules
 * Les fonctions annonymes
 * Les autres types: `bytes`, `bytearray`, `complex`, ...
+* L'opérateur `is`
 * Les autre fonctions internes ("build-in functions")
     - `all()`, `any()`, `enumerate()`, `abs()`, `filter()`, `globals()`,
       `hex()`, `id()`, `isinstance()`, `iter()`, `locals()`, `map()`, `max()`,
