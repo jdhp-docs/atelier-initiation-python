@@ -51,6 +51,21 @@ rien de bien compliqué et
 même sans ces pré-requis,
 vous devriez quand même pouvoir suivre sans trop de difficultés.
 
+* Syntaxe d'un langage : sa grammaire
+* Bibliothèque : fichier qui contient des morceaux de logiciels réutilisable
+  pour faire d'autres logiciels (une sorte de catalogue de composants prêts à
+  l'emploi)
+* Compilateur vs interprète :
+    - certains langages sont *compilés* (ex: C, C++, ...)
+    - d'autres sont *interprétés* (ex: Python, Perl, ...)
+    - un logiciel écrit avec un langage compilé doit être transformé en
+      exécutable avant de pouvoir être utilisé (c'est le *compilateur*
+      qui transforme le code source en executable)
+    - dans le cas d'un logiciel écrit avec un langage interprété, instructions
+      écrites dans le code source sont traitées à la volée (interprété) par un
+      programme appelé interpreteur (ou interprete). À aucun moment le programme
+      est converti en executable, il ne peut pas marcher sans l'interprete.
+
 ---
 
 ## Objectifs
@@ -317,7 +332,8 @@ utiliser Python 2 plutôt que Python 3.
 
 ---
 
-Principales raisons:
+#### Principales raisons
+
 1. Quelques outils et bibliothèques utilisées par ces développeurs n'ont toujours pas été mises à jours pour Python 3
 2. De nombreuses innovations de Python 3.X sont de toute façon portées dans Python 2.7
 3. Manque de le temps, de moyens ou de motivation de porter certains projets
@@ -328,17 +344,14 @@ Source: [www.randalolson.com/2015/01/30/python-usage-survey-2014/](http://www.ra
 
 ---
 
-
-<br />
-
-.box[
-D'accord mais pour nous ce sera **Python 3** !
-]
+#### D'accord mais pour nous ce sera **Python 3** !
 
 * Il est assez peu probable que vous soyez concerné par le premier argument, les principales grosses bibliothèques ont déjà été portées depuis plusieurs années
 * Vous débutez en python donc les arguments 2 et 3 ne sont pas valables pour vous
 * Python 2 meurt (très) lentement mais surement...
 * Python 3 c'est (le présent et) l'avenir !
+
+<br />
 
 .box[
 Il existe des outils pour automatiser la conversion des programmes de Python 2
@@ -375,29 +388,51 @@ class: center, middle, inverse
 
 L'interprète Python et l'environnement de développement IDLE
 
+???
+
+Assez parlé, .red[passons à la pratique].
+
+On va commencer par .red[installer l'environnement Python].
+
+Qu'est-ce que j'entends par ".red[environnement Python]" ?
+
 ---
 
-### Un aperçu de l'environnement (standard) de programmation Python [TODO]
+### Un aperçu de l'environnement (standard) de programmation Python
 
 * *Implémentation* standard (CPython)
-    - Interprète python standard (aussi appelé CPython)
-    - Bibliothèques standard
-    - IDE (éditeur) : IDLE
-    - Outils : pip, 2to3, etc.
+    - Un ***interprète*** python standard (aussi appelé CPython)
+    - Une ***bibliothèques standard***
+    - Un éditeur pour écrire vos programmes : IDLE
+    - Divers outils : pip, 2to3, ...
+
 * Bibliothèques externes
     - Numpy
     - Matplotlib
+    - Scipy
+    - Pillow
     - PyQt
-    - etc.
-* Interprètes/outils externes
+    - ...
+
+* Interprètes/éditeurs/outils externes
     - IPython
     - Sphinx
     - ...
 
-* http://enacit1.epfl.ch/introduction-python/outils-python.html
-* https://en.wikipedia.org/wiki/Python_%28programming_language%29#Implementations
-* https://docs.python.org/3.5/tutorial/interpreter.html
-* https://docs.python.org/3.5/using/windows.html
+???
+
+Quand vous installez la version standard de Python vous avez au moins .blue[ça]...
+
+C'est la brique de base.
+
+* Vous pouvez installer sur votre système des .red[bibliothèques externes]
+* qui vont vous permettre .red[d'étendre] la bibliothèque standard
+* et d'ajouter de .red[nouvelles fonctionnalités prêtes à l'emploi]
+
+Par exemple:
+* si vous voulez faire du traitement d'image en Python, 
+* vous pouvez installer la bibliothèque externe Pillow
+* qui vous fournira tout ce dont vous avez besoin
 
 ---
 
@@ -418,27 +453,73 @@ L'interprète Python et l'environnement de développement IDLE
 
 ---
 
+class: center, middle
+
 ### Alternative : les distributions
 
 Qu'est-ce que c'est ?
 
-* Distribution Python: Anaconda, ...
-    * *Implémentation* standard (CPython)
-        - interprète python standard (aussi appelé CPython)
-        - outils : pip, 2to3, etc.
-        - bibliothèques standard
-        - IDE (éditeur) : IDLE
-    * Bibliothèques externes
-        - Numpy
-        - Matplotlib
-        - PyQt
-        - ...
-    * IPython (ne pas en parler ???)
-        - un interprète amélioré
+---
 
-Pourquoi utiliser une distribution ?
+#### Avec l'installation standard
 
-Quelques exemples de distributions Python:
+* *Implémentation* standard (CPython)
+
+    - Un ***interprète*** python standard (aussi appelé CPython)
+    - Une ***bibliothèques standard***
+    - Un éditeur pour écrire vos programmes : IDLE
+    - Divers outils : pip, 2to3, ...
+
+.grey[
+* Bibliothèques externes
+
+    - Numpy
+    - Matplotlib
+    - Scipy
+    - ...
+]
+
+.grey[
+* Interprètes/éditeurs/outils externes
+
+    - IPython
+    - Sphinx
+    - ...
+]
+
+---
+
+#### Avec une distribution
+
+* *Implémentation* standard (CPython)
+
+    - Un ***interprète*** python standard (aussi appelé CPython)
+    - Une ***bibliothèques standard***
+    - Un éditeur pour écrire vos programmes : IDLE
+    - Divers outils : pip, 2to3, ...
+
+* Des bibliothèques externes préinstallées
+
+    - Numpy
+    - Matplotlib
+    - Scipy
+    - ...
+
+* Des interprètes/éditeurs/outils externes supplémentaires
+
+    - IPython
+    - Sphinx
+    - ...
+
+---
+
+### Quelques exemples de distributions Python
+
+<br />
+<br />
+<br />
+<br />
+
 * [Anaconda](https://www.continuum.io/)
 * [Enthought Canopy](https://www.enthought.com/)
 * [Python(x,y)](http://python-xy.github.io/)
@@ -446,17 +527,64 @@ Quelques exemples de distributions Python:
 
 ---
 
+class: center, middle
+
+### Pourquoi utiliser une distribution ?
+
+???
+
+Pour nous .red[simplifier la vie]...
+
+C'est surtout valable pour les utilisateurs de Windows...
+
+Ça nous évite d'installer une par une les .red[bibliothèques externes]
+et les .red[outils externes] qu'on pourrait être amené à devoir utiliser...
+
+Il y a d'autres avantages:
+* la .red[mise à jour simplifiée] des bibliothèques et des outils
+* avoir un .red[ensemble de bibliothèques cohérent] où il n'y a pas de
+  problèmes de versions de bibliothèques incompatibles
+* la gestion des .red[dépendances]
+* ...
+
+.comment[Pour ceux qui connaissent PIP, il faut savoir que certaines bibliothèques
+ne peuvent pas être installées avec PIP (ex: numpy), alors que la plupart sont
+préinstallées ou facilement installables avec les distributions.]
+
+---
+
 ### Installer Anaconda (ou Miniconda)
 
-...
+Anaconda:
+* Contient plus de [300 bibliothèques](http://docs.continuum.io/anaconda/pkg-docs) externes Python
+* ~380 Mo sous Windows
+* ~270 Mo sous MacOSX
 
-TODO: télécharger Anaconda et le mettre sur le serveur de fichier du Volab pour éviter d'attendre 1h que tt le monde télécharge les 600Mo du paquet le jour de l'atelier...
+Miniconda:
+* Une version allégée, vous choisissez les bibliothèques à installer
+* ~30 Mo sous Windows
+* ~20 Mo sous MacOSX
 
-[www.continuum.io](https://www.continuum.io/)
+.box[
+.center[[www.continuum.io](https://www.continuum.io/)]
+]
+
+???
+
+On va installer Anaconda.
+
+Une des distribution Python les plus connues est les plus réputées.
+
+.red[**Qui parmi vous utilise autre chose que Windows ?**]
+
+.todo[télécharger Anaconda et le mettre sur le serveur de fichier du Volab pour éviter d'attendre 1h que tt le monde télécharge les 600Mo du paquet le jour de l'atelier...]
+.todo[imprimer le cheatcode conda, tester l'install et l'appel de conda sur Windows]
 
 ---
 
 ### L'interprète python
+
+.todo[...]
 
 * utilisation de l'interprète interactif (windows, linux, mac)
 * execution d'un programme Python écrit dans un fichier
@@ -466,6 +594,8 @@ TODO: télécharger Anaconda et le mettre sur le serveur de fichier du Volab pou
 ---
 
 ### L'environnement de développement IDLE
+
+.todo[...]
 
 * présentation: IDE "officiel" de Python, écrit en Python, open source, ... pourquoi IDLE?: 
 * installation
@@ -484,55 +614,6 @@ https://en.wikipedia.org/wiki/Comparison_of_integrated_development_environments#
 
 ---
 
-### Avant de commencer
-
-Quelques liens utiles (pages web à ajouter à vos favoris):
-* [https://docs.python.org/3/library/index.html](https://docs.python.org/3/library/index.html) (celui là est indispensable!)
-* [https://docs.python.org/3/tutorial/index.html](https://docs.python.org/3/tutorial/index.html)
-* [https://docs.python.org/3/reference/index.html](https://docs.python.org/3/reference/index.html)
-* [https://docs.python.org/3/glossary.html](https://docs.python.org/3/glossary.html)
-
----
-
-### "The Zen of Python"
-
-```
->>> import this
-The Zen of Python, by Tim Peters
-
-Beautiful is better than ugly.
-Explicit is better than implicit.
-Simple is better than complex.
-Complex is better than complicated.
-Flat is better than nested.
-Sparse is better than dense.
-Readability counts.
-Special cases aren't special enough to break the rules.
-Although practicality beats purity.
-Errors should never pass silently.
-Unless explicitly silenced.
-In the face of ambiguity, refuse the temptation to guess.
-There should be one-- and preferably only one --obvious way to do it.
-Although that way may not be obvious at first unless you're Dutch.
-Now is better than never.
-Although never is often better than *right* now.
-If the implementation is hard to explain, it's a bad idea.
-If the implementation is easy to explain, it may be a good idea.
-Namespaces are one honking great idea -- let's do more of those!
-```
-
-???
-
-TODO: supprimer ?
-
-Il y a un "easter egg" dans Python,
-quand on tape `import this` dans l'interprète,
-quelques unes des bonnes pratiques de base de Python sont rappelées.
-
-C'est amusant mais c'est plus anecdotique qu'autre chose...
-
----
-
 name: variables-types
 class: center, middle, inverse
 
@@ -542,19 +623,141 @@ class: center, middle, inverse
 
 ### Qu'est-ce qu'une variable ?
 
-...
+.todo[...]
+
+nom
+valeure
+type
 
 ---
 
 ### Affecter une valeur à une variable
 
-...
+```python
+x = 3
+```
+
+---
+
+### Le type d'une variable
+
+Le *type* caractérise la valeur d'une variable
+
+Les .red[nombres entiers]
+```python
+var = 5
+var = -179756579879372368792803
+```
+
+Les .red[nombres décimaux]
+```python
+var = 31.141592
+var = -0.162
+```
+
+Les .red[chaînes de caractères] (notées entre guillemets)
+```python
+var = "Bonjour"
+var = "a"
+```
+
+Les .red[booléens] ("vrai" ou "faux")
+```python
+var = True
+var = False
+```
+
+???
+
+Le type : ce qui caractérise la valeur d'une variable
+
+Booléens = seulement deux valeurs : "vrai" ou "faux"
+
+---
+
+Les chaînes de caractères sont internationalisées ("Unicode")
+```python
+var = "你好 !"
+var = "العربية"
+```
+
+???
+
+Les chaînes de caractère ne sont pas limitées aux caractères latin (ASCII)
 
 ---
 
 ### Afficher la valeur d'une variable
 
+```python
+x = 3
+print(x)
+```
+
+```python
+var = "bonjour"
+print(var)
+```
+
+---
+
+### Afficher le type d'une variable
+
+```python
+s = "Bonjour"
+
+print(s)
+print(type(s))
+```
+
+```python
+n = 123
+
+print(n)
+print(type(n))
+```
+
+```python
+x = 0.1
+
+print(x)
+print(type(x))
+```
+
+---
+
+### Python est un langage à *typage dynamique*
+
+On dit que Python est un langage à *typage dynamique* : 
+une variable peut changer de type
+
+```python
+var = "Bonjour"
+
+print(var)
+print(type(var))
+
+var = 123
+
+print(var)
+print(type(var))
+
+var = 0.1
+
+print(var)
+print(type(var))
+```
+
+---
+
+### Les conversions de type
+
 ...
+
+int()
+float()
+str()
+bool()
 
 ---
 
@@ -565,21 +768,189 @@ class: center, middle, inverse
 
 ---
 
-### print()
+### Qu'est-ce qu'une fonction ?
 
-...
+* Un nom suivi de parenthèses
+
+* Effectue des opérations
+
+* On peut lui communiquer des objets en entrée (arguments)
+
+* Elle peut retourner un résultat
+
+Exemple:
+
+```python
+foo()
+```
+
+```python
+x = "hello"
+bar(x)
+```
+
+```python
+x = baz(3)
+```
+
+???
+
+Si c'est pas très clair à ce stade là c'est pas très grave
+
+On étudiera vraiment les fonctions qu'à la fin de l'atelier
 
 ---
 
-### help()
+### La fonction print()
 
-...
+Afficher la valeur d'une variable
+
+```python
+x = 3
+print(x)
+
+s = "bonjour"
+print(s)
+```
+
+Afficher un message
+
+```python
+print("bonjour")
+```
+
+Afficher le résultat d'une opération
+
+```python
+print(12 * 6)
+```
+
+Etc.
+
+???
+
+On a déjà vu la fonction print()
 
 ---
 
-### dir()
+### La fonction type()
 
-...
+Obtenir le type d'une variable
+
+```python
+s = "Bonjour"
+
+print(type(s))
+```
+
+```python
+n = 123
+
+print(type(n))
+```
+
+```python
+x = 0.1
+
+print(type(x))
+```
+
+???
+
+On a déjà vu la fonction print()
+
+---
+
+### La fonction input()
+
+Obtenir une valeur saisie par l'utilisateur
+
+```python
+s = input()
+
+print(s)
+print(type(s))
+```
+
+Attention: la valeur retournée est toujours une chaîne de caractères
+
+---
+
+### La fonction help()
+
+* Pour consulter l'aide en ligne à propos d'une variable, d'une fonction, etc.
+
+* Appuyez sur les flèches haut/bas pour faire défiler
+
+* Appuyez sur `q` pour quitter l'aide en ligne
+
+```python
+s = "bonjour"
+
+help(s)
+```
+
+```python
+help(type)
+```
+
+---
+
+### La fonction dir()
+
+Afficher la liste de toutes les *objets* instanciées
+
+```python
+s = "Bonjour"
+x = 3
+
+print(dir())
+```
+
+Afficher la liste des méthodes d'un *objet*
+
+```python
+s = "Bonjour"
+
+print(dir(s))
+```
+
+???
+
+.todo[bof...]
+
+---
+
+name: operateurs
+class: center, middle, inverse
+
+## Les commentaires
+
+---
+
+### Ajouter un commentaire
+
+* Un commentaire est une chaîne de caractère qui commence par `#` et qui se
+  termine par le retour à la ligne
+
+* Les commentaires servent à documenter le code du programme
+
+* Ils servent uniquement d'indication au programmeur, ils sont ignorés par
+  l'interprète Python
+
+```python
+# Ceci est un commentaire
+x = 0.1
+y = 4
+
+print(x)  # Voici un autre commentaire
+
+# Un commentaire
+# sur plusieurs lignes
+print(y)
+```
+
+Il est important de documenter (intelligemment) le code source d'un programme !
 
 ---
 
@@ -596,6 +967,17 @@ class: center, middle, inverse
 
 ---
 
+### Exercice
+
+Écrire dans un fichier Python un programme qui:
+* Affiche un message pour demander à l'utilisateur de saisir un nombre
+* Récupère le nombre saisi
+* Affiche sa valeur multipliée par 2
+
+Tester le programme en l'appelant comme n'importe quel autre logiciel (double clic)
+
+---
+
 name: strustures-de-donnees
 class: center, middle, inverse
 
@@ -605,17 +987,147 @@ class: center, middle, inverse
 
 ### Les listes
 
-...
+Créer une liste vide
+```python
+l = []
+```
+
+Ajouter un élément à la fin de la liste
+```python
+l.append(2)
+l.append("hello")
+l.append(3.14)
+```
 
 ---
 
-### Les dictionnaires
+Créer une liste initialisée...
+```python
+l = ["Bonjour", 2.1, 3]
+```
+
+et la compléter
+```python
+l.append(2)
+l.append("hello")
+l.append(3.14)
+```
+
+---
+
+Obtenir le 1er élément de la liste
+```python
+l[0]
+```
+
+Obtenir le 2e élément de la liste
+```python
+l[1]
+```
+
+Obtenir le 3e élément de la liste
+```python
+l[2]
+```
+
+???
+
+Obtenir:
+* affecter à une variable
+* afficher
+
+---
+
+Modifier le 2e élément de la liste
+```python
+l[1] = "bonjour"
+```
+
+Supprimer le 2e élément de la liste
+```python
+del(l[1])
+```
+
+Effacer une liste
+```python
+l.clear()
+```
+
+---
+
+Obtenir la taille d'une liste
+```python
+l = [1, 2, 3]
+len(l)
+```
+
+```python
+l = ["hello", "world"]
+len(l)
+```
+
+---
+
+Vérifier si un élément est dans une liste...
+```python
+l = ["hello", "world"]
+"bonjour" in l
+"hello" in l
+```
+
+ou le contraire
+```python
+l = ["hello", "world"]
+"bonjour" not in l
+"hello" not in l
+```
+
+???
+
+Exemple:
+```python
+print("bonjour" in l)
+print("hello" in l)
+```
+
+---
+
+Concaténer deux listes
+```python
+l1 = ["hello", "world"]
+l2 = [3, 4]
+l1 + l2
+```
+
+---
+
+Trier une liste
+```python
+l = [16, -2, 3, 0.1]
+l.sort()
+```
+
+Inverser une liste
+```python
+l = ["a", "b", "c", "d"]
+l.reverse()
+```
+
+---
+
+### Les tuples
 
 ...
 
 ---
 
 ### Les ensembles
+
+...
+
+---
+
+### Les dictionnaires
 
 ...
 
@@ -637,6 +1149,8 @@ class: center, middle, inverse
 ### Boucles For
 
 ...
+
+range()
 
 ---
 
@@ -1312,3 +1826,63 @@ Présentation des trucs cool (sans code) qu'on peut faire avec Python (distingue
 ???
 
 TODO: mettre ça autre part
+
+---
+
+### Pour finir...
+
+Quelques liens utiles (pages web à ajouter à vos favoris):
+* [https://docs.python.org/3/library/index.html](https://docs.python.org/3/library/index.html) (celui là est indispensable!)
+* [https://docs.python.org/3/tutorial/index.html](https://docs.python.org/3/tutorial/index.html)
+* [https://docs.python.org/3/reference/index.html](https://docs.python.org/3/reference/index.html)
+* [https://docs.python.org/3/glossary.html](https://docs.python.org/3/glossary.html)
+
+---
+
+### N'oubliez pas le "Zen of Python"
+
+```
+>>> import this
+The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!
+```
+
+???
+
+Il y a un "easter egg" dans Python,
+quand on tape `import this` dans l'interprète,
+quelques unes des bonnes pratiques de base de Python sont rappelées.
+
+C'est amusant mais c'est plus anecdotique qu'autre chose...
+
+On ne va pas lire ça ici, je vous laisse le lire plus tard si vous le voulez...
+
+---
+
+## Références
+
+Partie "IDE":
+* http://enacit1.epfl.ch/introduction-python/outils-python.html
+* https://en.wikipedia.org/wiki/Python_%28programming_language%29#Implementations
+* https://docs.python.org/3.5/tutorial/interpreter.html
+* https://docs.python.org/3.5/using/windows.html
+
