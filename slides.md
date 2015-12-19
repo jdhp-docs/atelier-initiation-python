@@ -202,8 +202,7 @@ qui sont importants à connaitre pour un programmeur avancé
 mais qui ne sont pas indispensables pour une première approche (pragmatique et
 pratique) du langage.
 
-
-
+.comment[
 > Python est un langage à *typage dynamique fort*.
 > 
 > Typage dynamique:
@@ -222,6 +221,7 @@ pratique) du langage.
 > 
 > * https://fr.wikipedia.org/wiki/Typage_dynamique
 > * https://fr.wikipedia.org/wiki/Typage_fort
+]
 
 ---
 
@@ -527,9 +527,18 @@ Qu'est-ce que c'est ?
 
 ---
 
-class: center, middle
-
 ### Pourquoi utiliser une distribution ?
+
+Pour nous simplifier la vie ! (surtout sur Windows)
+
+Ça nous évite d'installer un par un les outils externes
+et les bibliothèques externes dont on a besoin
+
+Autres avantages:
+* Une mise à jour simplifiée des bibliothèques et des outils
+* Un ensemble de bibliothèques cohérent (pas de problèmes d'incompatibilités)
+* La gestion des .red[dépendances]
+* ...
 
 ???
 
@@ -537,8 +546,8 @@ Pour nous .red[simplifier la vie]...
 
 C'est surtout valable pour les utilisateurs de Windows...
 
-Ça nous évite d'installer une par une les .red[bibliothèques externes]
-et les .red[outils externes] qu'on pourrait être amené à devoir utiliser...
+Ça nous évite d'installer un par un les .red[outils externes]
+et les .red[bibliothèques externes] qu'on pourrait être amené à devoir utiliser...
 
 Il y a d'autres avantages:
 * la .red[mise à jour simplifiée] des bibliothèques et des outils
@@ -550,6 +559,21 @@ Il y a d'autres avantages:
 .comment[Pour ceux qui connaissent PIP, il faut savoir que certaines bibliothèques
 ne peuvent pas être installées avec PIP (ex: numpy), alors que la plupart sont
 préinstallées ou facilement installables avec les distributions.]
+
+---
+
+### Anaconda et Miniconda
+
+Anaconda et Miniconda contienent:
+* Des .red[bibliothèques externes] qui ne sont pas disponibles sur PyPI:
+    - Numpy
+    - PyQt
+    - ...
+* L'interprète amélioré .red[IPython]
+* L'application .red[Jupyter] pour créer et utiliser des *notebooks*
+* Les éditeurs .red[Spyder], .red[Sublime Text 2] et .red[PyCharm]
+
+.center[<img src="fig/environnement-python.png" width="500">]
 
 ---
 
@@ -584,33 +608,182 @@ Une des distribution Python les plus connues est les plus réputées.
 
 ### L'interprète python
 
-.todo[...]
+#### Ouvrir l'interprète en mode interactif
 
-* utilisation de l'interprète interactif (windows, linux, mac)
-* execution d'un programme Python écrit dans un fichier
-    - via la ligne de commande
-    - depuis l'interface graphique du système (double clic...)
+* Lancer l'interprète Python depuis un terminal
+
+    - Windows: `py test.py` .todo[check]
+    - MacOSX, Linux, Unix: `python3 test.py`
+
+* Taper la ligne suivante dans l'interprète
+
+```python
+print("hello")
+```
+
+---
+
+#### Exécuter un fichier Python depuis un terminal
+
+* Écrire la ligne précédente dans un fichier appelé "test.py" avec votre
+  éditeur de texte préféré
+
+```python
+print("hello")
+```
+
+* Exécuter le fichier depuis un terminal
+
+    - Windows: `py test.py`
+    - MacOSX, Linux, Unix: `python3 test.py`
+
+---
+
+#### Exécuter un fichier Python depuis l'explorateur de fichiers
+
+* Écrire le programme suivant dans un fichier appelé "test_graphique.py" avec votre éditeur de texte préféré
+
+```python
+#!/usr/bin/env python3
+
+import tkinter as tk
+
+root = tk.Tk()
+
+label = tk.Label(root, text="Bonjour !", font="Sans 30 bold")
+label.pack()
+
+root.mainloop()
+```
+
+* Double cliquer sur votre fichier "test_graphique.py" .todo[tester...]
+
+.box[
+Remarque: il est peut être préférable d'appeler ce programme "test_graphique.pyw" sur Windows...
+]
 
 ---
 
 ### L'environnement de développement IDLE
 
-.todo[...]
+IDLE
+* L'*IDE* "officiel" de Python
+* Intégré de base avec Python (standard): rien à installer
+* Écrit en Python
+* Open source
 
-* présentation: IDE "officiel" de Python, écrit en Python, open source, ... pourquoi IDLE?: 
-* installation
-* appel
-* interprète interactif
-* éditeur: nouveau/ouvrir, enregistrer, executer
+Pourquoi IDLE ?
+* Un classique
+* Intégré de base avec Python: si vous avez Python, vous avez IDLE (sauf cas particuliers)
+* Fonctionne sur Windows, MacOSX, Linux, ...
+* Fonctionnalités basiques mais adaptés aux besoin de cet atelier
+    - Ni trop simple, ni trop compliqué
 
-Si IDLE ne vous plait pas (personnellement je ne m'en sert pas, j'utilise un
-éditeur de texte généraliste (vim) + ipython à la place), il en existe plein
-d'autres: notepad++, codeblocks, etc.
+---
+
+#### Les alternatives à IDLE
+
+Si IDLE ne vous plait pas
 
 * [PyCharm](http://www.jetbrains.com/pycharm/)
 * [Spyder](https://github.com/spyder-ide/spyder/)
+* Et les autres: Notepad++, Code::Blocks, Eclipse, ...
 
-https://en.wikipedia.org/wiki/Comparison_of_integrated_development_environments#Python
+.box[
+Vous pouvez aussi faire votre choix [ici](https://en.wikipedia.org/wiki/Comparison_of_integrated_development_environments#Python)
+]
+
+???
+
+Aujourd'hui on va utiliser IDLE
+
+Si il ne vous plait pas, il existe plein d'alternatives
+
+Personnellement je n'utilise pas d'IDLE pour écrire mes programmes Python...
+
+Mais je trouve qu'il est bien adapté pour cet atelier.
+
+---
+
+#### Écriture de programmes Python avec IDLE
+
+##### 1. Créer un nouveau programme
+
+* "File / New File" .comment[(Ctrl + n)]
+
+Une nouvelle fenêtre apparait : l'éditeur de code Python
+
+--
+
+##### 2. Écrire notre programme
+
+Écrire le programme suivant dans la fenêtre d'édition
+
+```python
+print("hello")
+```
+
+--
+
+##### 3. Sauvegarder notre programme dans un fichier Python (.py)
+
+* "File / Save" .comment[(Ctrl + s)]
+
+--
+
+##### 4. Exécuter notre programme
+
+* "Run / Run module" .comment[(F5)]
+
+Le résultat est affiché dans la console IDLE ("Shell")
+
+???
+
+À l'ouverture d'IDLE vous avec une console (Shell) pour interagir directement
+avec l'interprète Python
+
+---
+
+class: center, middle
+
+#### Exécuter notre protramme depuis une console du système ou depuis l'explorateur de fichiers
+
+Comme pour les exercices précèdents...
+
+???
+
+Ça c'est juste pour vous dire que bien sûr, une fois que vous avez fini
+d'écrire votre programme, vous n'avez plus besoin d'IDLE pour l'exécuter...
+
+---
+
+#### Ouvrir un programme existant
+
+* "File / Open" .comment[(Ctrl + o)]
+
+--
+
+#### Ouvrir un module de votre bibliothèque standard Python (ou d'une bibliothèque externe installée)
+
+* "File / Open Module" .comment[(Alt + m)]
+
+Tapez `random` dans le champ de recherche et appuyez sur Ok.
+
+---
+
+#### Utilisation de l'interprète interactif dans IDLE
+
+##### 1. Revenez sur la console (ou le fenêtre "Shell")
+
+Ou depuis le menu: "Run / Python Shell"
+
+--
+
+##### 2. Tapez directement la ligne suivante:
+
+```python
+print("hello")
+```
 
 ---
 
@@ -931,6 +1104,7 @@ help(s)
 ```
 
 ```python
+help(print)
 help(type)
 ```
 
@@ -1162,6 +1336,15 @@ print(not var)
 * Affiche sa valeur multipliée par 2
 
 Tester le programme en l'appelant comme n'importe quel autre logiciel (double clic)
+
+???
+
+```python
+print("Entrez un nombre entier: ", end="")
+s = input()
+n = int(s)
+print(n * 2)
+```
 
 ---
 
