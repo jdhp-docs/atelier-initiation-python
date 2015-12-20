@@ -2471,9 +2471,13 @@ public class Test {
     - On peut tester du code à la volée (et avec IPython c'est encore mieux!)
     - Pas d'infrastructure complexe avec des makefile, etc.
 
+--
+
 * Les fichiers code source n'ont pas besoin d'être rangé d'une façon particulière
     - Contrairement au langage Java
     - Ex: ...
+
+--
 
 * Typage dynamique
     - L'utilisateur n'a pas besoin de déclarer explicitement le type de chaque
@@ -2481,6 +2485,8 @@ public class Test {
     - Pas besoin d'écrire un fichier "header" (.h) pour chaque module contrairement au C/C++
     - Gain de temps
     - Code plus compact
+
+---
 
 * Gestion de la mémoire automatique par ramasse-miettes
     - L'utilisateur n'a pas besoin d'allouer/désallouer manuellement la mémoire des variables dynamiques
@@ -2724,10 +2730,14 @@ Permet d'écrire des logiciels portables:
 
 ### Une bibliothèque standard très riche ("Batteries included") 
 
-mettre ici un schéma avec plusieurs cercles concentriques:
-- le langage python: les ~classes/fonctions~ internes
-- la bibliothèque standard: toutes les fonctionnalités ("modules") livrés avec le langage (ie. rien à installer) -> montrer la liste sur la page de doc de python.org
-- les nombreux paquets externes (à installer au cas par cas)
+La bibliothèque standard de Python est extrêmement riche !
+
+Sans rien installer de plus que le Python standard vous pouvez déjà faire
+énormément de choses et écrire facilement des programmes complexes !
+
+.box[
+.center[Un aperçu ici: [docs.python.org/3/library/index.html](https://docs.python.org/3/library/index.html)]
+]
 
 ---
 
@@ -2755,13 +2765,12 @@ mettre ici un schéma avec plusieurs cercles concentriques:
 
 ### Un langage très généraliste
 
-Bibliothèque standard + bibliothèques externes.
+Bibliothèque standard + les nombreuses bibliothèques externes = un potentiel énorme!
 
-On peut presque tout faire avec:
+On peut presque tout faire avec Python
 - interfaces graphiques
 - calcul scientifique (algèbre, analyse, statistiques/probas, théorie des graphs (pygraph), visualisation, etc.)
-- calcul formel avec Sympy (un peu comme Maple, Mathematica et Maxima)
-    - calculer la dérivée ou l'intégrale d'une fonction, résoudre une équation, factorisation, calcul de limites, résolution de systèmes d'équations, ...
+- calcul formel avec Sympy (un peu comme Maple, Mathematica et Maxima): calculer la dérivée ou l'intégrale d'une fonction, résoudre une équation, factorisation, calcul de limites, résolution de systèmes d'équations, ...
 - informatique haute performance / calcul massivement parallèle
 - chimie, [biologie](http://biopython.org), astronomie, [psychologie](http://www.psychopy.org), [finance](http://quantlib.org), etc.
 - optimisation, apprentissage automatique, traitement du signal, ...
@@ -2769,50 +2778,55 @@ On peut presque tout faire avec:
 - multimédia
 - 3D
 - jeux
+
+---
+
 - traitement d'image
 - applications web
-- systèmes embarqués (robotique, etc.)
+- systèmes embarqués (robotique, raspberrypi, ...)
 - bases de données
 - réseau
 - outils système
 - greffons (plugins) pour Blender, The Gimp, Inkscape, FreeCAD, OpenOffice, etc.
 - manipulation/édition de fichiers, documents, ... (PDF, HTML, XML, etc.)
-- cartographie (http://matplotlib.org/basemap/, http://matplotlib.org/basemap/users/examples.html, https://jakevdp.github.io/blog/2015/08/14/out-of-core-dataframes-in-python/)
+- cartographie
 - ...
 
 ???
 
+.hidden[
 TODO: https://www.python.org/about/apps/
-
 TODO: http://sametmax.com/tres-grand-listing-des-libs-tierce-partie-les-plus-utiles-en-python/
-
 TODO: faire apparaître les items un par un et mettre une image dans la colonne
 de gauche pour chaque item.
+- cartographie (http://matplotlib.org/basemap/, http://matplotlib.org/basemap/users/examples.html, https://jakevdp.github.io/blog/2015/08/14/out-of-core-dataframes-in-python/)
+]
 
 ---
 
 ### Ipython
 
 Une console interactive très puissante, conviviale et utile:
-* conviviale: autocomplétion, navigation dans l'historique, etc.
-* explorer des modules
-* vérifier la signature d'une fonction, le type d'un objet, etc.
-* afficher le code source d'une fonction ou d'un module
-* retrouver l'emplacement d'un module
-* tester des bouts de code
-* consulter la documentation intégrée
-* lister les objets accessibles dans l'espace de nom courant, rechercher un objet à partir d'un motif
-* rechercher une fonction/une méthode
-* vérifier leur occupation en mémoire des objets instanciés
-* profiler une fonction (mesurer son temps d'exécution)
-* facilite l'utilisation du debugger interactif
-* introspection, reflexivité, etc.
-* parfaite intégration à matplotlib pour tracer des courbes directement depuis le terminal (comme gnuplot, etc.)
+* Conviviale: auto-complétion, navigation dans l'historique, etc.
+* Explorer des modules
+* Vérifier la signature d'une fonction, le type d'un objet, etc.
+* Afficher le code source d'une fonction ou d'un module
+* Retrouver l'emplacement d'un module
+* Tester des bouts de code
+* Consulter la documentation intégrée
+* Lister les objets accessibles dans l'espace de nom courant, rechercher un objet à partir d'un motif
+* Rechercher une fonction/une méthode
+* Vérifier leur occupation en mémoire des objets instanciés
+* Profiler une fonction (mesurer son temps d'exécution)
+* Facilite l'utilisation du debugger interactif
+* Parfaite intégration à matplotlib pour tracer des courbes directement depuis le terminal (comme gnuplot, etc.)
 * ...
 
 Je ne connais aucun langage qui propose une console aussi utile et puissante.
 
-Ça permet de raccourcir considérablement le cycle de développement d'un programme.
+---
+
+IPython permet de raccourcir considérablement le cycle de développement d'un programme
 
 En C/C++ ou en Java:
 * il faut se débrouiller avec une documentation statique (Doxygen ou Javadoc) généralement incomplète (quand elle existe) et difficile à comprendre
@@ -2827,26 +2841,29 @@ En C/C++ ou en Java:
 
 ???
 
-TODO: un tuto très intéressant: http://eric-pommereau.developpez.com/tutoriels/introduction-ipython/
-
-TODO: http://sametmax.com/quelques-bonnes-raisons-de-plus-dutiliser-ipython/
-
 Si vous n'avez pas compris ce que j'ai dit, retenez seulement qu'Ipython c'est
 super et qu'à ma connaissance aucun autre langage ne propose une console aussi
 conviviale et puissante.
+
+.hidden[
+TODO: un tuto très intéressant: http://eric-pommereau.developpez.com/tutoriels/introduction-ipython/
+TODO: http://sametmax.com/quelques-bonnes-raisons-de-plus-dutiliser-ipython/
+]
 
 ---
 
 ### Jupyter
 
-notebooks: pour faire des tutoriels interactifs sur le web.
+Les "notebooks" Jupyter sont très à la mode en ce moment
+
+Utilisés pour faire des tutoriels interactifs sur le web
 
 Très utile pour enseigner le langage ou une de ses bibliothèques, faire des démonstrations sur le web, etc.
 
-Exemple: ...
-
 ???
 
+.hidden[
+Exemple: ...
 TO READ: http://blog.ouseful.info/2014/12/12/seven-ways-of-running-ipython-notebooks/
 
 http://nbviewer.ipython.org/
@@ -2855,6 +2872,7 @@ http://sametmax.com/profiter-du-notebook-de-ipython/
 http://www.randalolson.com/2012/05/12/a-short-demo-on-how-to-use-ipython-notebook-as-a-research-notebook/
 https://azure.microsoft.com/fr-fr/documentation/articles/virtual-machines-python-ipython-notebook/
 http://jupyter.readthedocs.org/en/latest/subprojects.html
+]
 
 ---
 
@@ -2874,24 +2892,38 @@ gratuit!
 Je ne connais aucun autre langage généraliste qui propose des bibliothèques
 aussi riche et bien intégrées pour le calcul scientifique.
 
+???
+
 Cet argument ne concerne pas seulement les scientifiques et les ingénieurs, tracer des graphs, etc. -> fablabs, finance, etc. (MsExcel)
 
 ---
 
 ### Des outils pour faciliter la distribution de vos programmes Python
 
-PIP, PyPi
+Vous pouvez facilement partager vos programmes et vos bibliothèques Python sur
+[PyPI](https://pypi.python.org/pypi)
 
+La commande PIP distribuée avec les versions récentes de Python permet de 
+télécharger et installer très facilement tous les programmes et toutes les bibliothèques
+contenues sur [PyPI](https://pypi.python.org/pypi)
+
+???
+
+.hidden[
 Anaconda, etc. : une "distribution" Python pour Windows/MacOSX/Linux -> Python + de nombreux paquets externes
 Intérêt: un python classique avec en plus de nombreux paquets externes préinstallés et un système pour garder les paquets à jours
+]
 
 ---
 
 ### Open source
 
-pas de problèmes de licence ou de brevets (contrairement à C# ou à Java à ses débuts)
-n'importe qui peut étudier la mécanique interne de Python et améliorer le code source de ses outils (interprètes, debuggeur, etc.)
-n'importe qui peut proposer ... PEP
+Pas de problèmes de licence ou de brevets (contrairement à C# ou à Java à ses débuts)
+
+N'importe qui peut étudier la mécanique interne de Python
+
+N'importe qui peut proposer des améliorations au langage, à son interprète et à
+sa bibliothèque standard
 
 ---
 
@@ -2916,13 +2948,21 @@ PEPs = Python Enhancement Proposals
 
 ### Extending/embeding with C/C++/C#/Java/...
 
-Un développeur expérimenté peut facilement porter une bibliothèque C/C++/C#/Java/... en Python...
+Un développeur expérimenté peut assez facilement utiliser une bibliothèque
+C/C++/C#/Java/... dans Python !
 
-Également utile pour les programmes exigents en terme de performances: les sections de code critiques peuvent être écrite en C/C++
-=> C + Python = on peut tout faire!
-=> une énorme base de code supplémentaire accessible depuis Python
+Très utile pour les programmes exigeants en terme de performances: les
+sections de code critiques peuvent être écrite en C/C++
 
-Embarquer python dans un logiciel écrit en C/C++/Java/... pour pouvoir executer du code Python dans ce logiciel (utile pour l'écriture de greffons).
+* C + Python = on peut tout faire!
+* Une énorme base de code supplémentaire accessible depuis Python
+
+--
+
+On peut aussi embarquer Python dans un logiciel écrit en C/C++/Java/...
+
+Utilisé par certains logiciels (Blender, Gimp, etc.) pour faciliter l'écriture
+de greffons (plugins)
 
 ---
 
@@ -2953,24 +2993,45 @@ Montrer un exemple de code documenté et le résultat sur sphinx
 
 ### Quelques idées reçues
 
-* "Python est lent..."
-    - Cf. PyGamma15
-    - La façon dont est écrit un programme compte tout autant que le langage lui même...
+#### "Python est lent..."
 
-* "Le typage dynamique est source d'erreurs"
-    - Tout dépend du programmeur... avec un peu de rigueur et de bon sens tout va bien
-    - Faire des tests unitaires, documenter chaque fonction, etc.
+* La façon dont est écrit un programme compte tout autant que le langage lui même...
+* Pour beaucoup de logiciel, c'est sans importance ou pas perceptible
+* Pour les autres (calcul scientifique, jeux, ...), il y a des astuces
+    * Cython
+    * Vectorisation dans Numpy
+    * Numba
+    * Écriture d'extensions C
 
-* "L'indentation obligatoire est pénible (tabulation vs espaces, garder toujours le même nombre d'espaces, etc.)"
-    - Il suffit de régler correctement son éditeur de texte une bonne fois pour toute : 1 tabulation = 4 espaces
+---
 
-* "Python découvre les erreurs au cours de l'exécution du programme, i.e. trop
-  tard... Au moins avec le langage C/C++/Java/... le compilateur me retourne
-  toutes les erreurs au moment de la compilation, i.e. avant l'exécution." 
-    - Les compilateurs (C/C++/Java/...) ne retournent pas toutes les erreurs, loin de là
-    - Il existe plein d'outils en Python pour faire de l'analyse de code *statique* (i.e. à froid):
-        - pylint
-        - 
+Cf. [PyGamma15](https://github.com/gammapy/PyGamma15/blob/gh-pages/talks/ctapipe/pygamma15-cta-data-processing.pdf)
+.center[<img src="fig-nonfree/speed.png" width="800">]
+
+---
+
+#### "Le typage dynamique est source d'erreurs"
+
+* Tout dépend du programmeur... avec un peu de rigueur et de bon sens tout va bien
+* Faire des tests unitaires, documenter chaque fonction, etc.
+
+---
+
+#### "L'indentation obligatoire est pénible (tabulation vs espaces, garder toujours le même nombre d'espaces, etc.)"
+
+* Il suffit de régler correctement son éditeur de texte une bonne fois pour
+  toute : 1 tabulation = 4 espaces
+
+---
+
+#### "Python découvre les erreurs au cours de l'exécution du programme, i.e. trop tard... Au moins avec le langage C/C++/Java/... le compilateur me retourne toutes les erreurs au moment de la compilation, i.e. avant l'exécution." 
+
+* Les compilateurs (C/C++/Java/...) ne retournent pas toutes les erreurs, loin
+  de là !
+* Il existe plein d'outils en Python pour faire de l'analyse de code *statique*
+  (i.e. à froid):
+    - pylint
+    - ...
 
 ---
 
