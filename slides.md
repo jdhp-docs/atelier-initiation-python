@@ -1527,6 +1527,16 @@ Se notre entre crochets
 
 ---
 
+#### Obtenir un élément de la liste
+
+```python
+l[N]         # <- retourne le N+1 ième élément de la liste
+```
+
+.box[
+**Attention:** les indexes commencent à 0 !
+]
+
 Obtenir le 1er élément de la liste
 ```python
 l[0]
@@ -1591,7 +1601,7 @@ l = ["hello", "world"]
 "hello" in l
 ```
 
-ou le contraire
+ou au contraire, si il est absent de la liste
 ```python
 l = ["hello", "world"]
 "bonjour" not in l
@@ -1625,6 +1635,45 @@ Inverser une liste
 ```python
 l = ["a", "b", "c", "d"]
 l.reverse()
+```
+
+---
+
+#### range(): une fonction bien utile...
+
+La fonction `range(n)` génère une liste de 0 à `n-1`
+
+Plutôt que d'écrire
+```python
+l = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+
+On peut écrire
+```python
+l = range(10)
+```
+
+On verra que c'est très utile pour les *boucles de contrôle* (*boucles for*)
+
+--
+
+Et `range(n, m)` génère une liste de nombre de `n` à `m-1`
+```python
+l = range(5, 10)         # génère [5, 6, 7, 8, 9]
+```
+
+---
+
+##### Remarque à propos de `range()`
+
+En toute rigueur, `range()` ne retourne pas une liste mais un *objet iterable*
+
+Vous pouvez plus ou moins l'utiliser comme une liste
+
+J'en dirai pas plus sur les objets iterables mais si vous vous voulez vraiment
+une liste à la place, vous pouvez écrire
+```python
+l = list(range(10))
 ```
 
 ---
@@ -1706,8 +1755,40 @@ class: center, middle, inverse
 
 ### If/Then/Else
 
-...
+Qu'est-ce que c'est et à quoi ça sert ?
+* Exécuter ou non certaines instructions suivant une condition
 
+Comment ça s'écrit ?
+
+```python
+if var:
+    # 1ère instruction executée si var est vraie (ie si "var==True")
+    # 2e instruction executée si var est vraie (ie si "var==True")
+    # 3e instruction executée si var est vraie (ie si "var==True")
+    # ...
+else:
+    # 1ère instruction executée si var est faux (ie si "var==False")
+    # 2e instruction executée si var est faux (ie si "var==False")
+    # 3e instruction executée si var est faux (ie si "var==False")
+    # ...
+```
+
+---
+
+Exemple
+```python
+var = True
+if var:
+    print("var vaut True")
+    print("on execute donc le 1er bloc")
+else:
+    print("var vaut True")
+    print("on execute donc le 2e bloc ('else')")
+
+print("Ici on est plus dans le if/then/else")
+```
+
+Notation
 * Le bloc débute après une ligne qui se termine par `:`
 * Le bloc dure sur toute la partie indentée qui suit
 
@@ -1719,7 +1800,34 @@ Notion à expliquer:
 
 ---
 
+La valeur testée
+* n'est pas nécessairement une variable...
+* on peut mettre n'importe quelle .red[expression] (retournant un booléen) après le `if`
+
 Exemple
+```python
+x = 3
+if x > 0:
+    print("x est positif")
+else:
+    print("x est négatif")
+```
+
+---
+
+#### La partie `else` n'est pas obligatoire
+
+On peut très bien écrire
+
+```python
+x = 3
+if x > 0:
+    print("x est positif")
+```
+
+---
+
+Exemple sans `else`
 ```python
 print("Quel est la capitale de l'Australie ?")
 reponse = input()
@@ -1743,7 +1851,31 @@ else:
 
 ---
 
-Les if/then/else imbriqués:
+#### Remarque sur la .red[portée] des variables
+
+L'exemple suivant est incorrect... Pourquoi ?
+
+```python
+x = 0
+if x == 0:
+    y = 3
+    print(y)
+
+print(x)
+print(y)
+```
+
+--
+
+Les variables définies pour la première fois à .red[l'intérieur d'un bloc] (la
+variable `y` dans l'exemple ci-dessus) ne sont pas visibles en dehors de ce bloc
+
+L'instruction `print(y)` retourne donc une erreur (on demande à python
+d'afficher la valeur d'une variable qui n'existe pas ici)
+
+---
+
+#### Les if/then/else imbriqués
 
 ```python
 print("Quel est ta note sur 20 ?")
@@ -1776,23 +1908,74 @@ else:
 
 ### Boucles For
 
-...
+Qu'est-ce que c'est et à quoi ça sert ?
+* Exécuter des instructions pour chacun des éléments d'un *objet itérable*
 
-range()
+Comment ça s'écrit ?
+
+```python
+for var in un_objet_iterable:
+    # 1ère instruction
+    # 2e instruction
+    # 3e instruction
+    # ...
+```
+
+Où
+* `un_objet_iterable` peut être une *séquence* : liste, tuple, ...
+* `un_objet_iterable` peut être le résultat de la fonction `range()`
+* ...
+
+Ok mais concrètement, à quoi ça sert et comment ça marche ?
+* Le mieux c'est de voir un exemple...
 
 ---
 
 1er exemple
 
 ```python
-print("La table de 3:")
-
-for n in range(10):
-    res = n * 3
-    print(n, "* 3", res)
+liste_de_chiffres = [2, 3, 5, 7]
+for chiffre in liste_de_chiffres:
+    print(chiffre)
 ```
 
---
+ou directement
+
+```python
+for chiffre in [2, 3, 5, 7]:
+    print(chiffre)
+```
+
+La "zone de traitement" des éléments est délimitée par le *bloc* indenté
+
+```python
+for chiffre in [2, 3, 5, 7]:
+    res = chiffre * 2
+    print(chiffre)
+    print(res)
+
+print("Là on est plus dans la boucle")
+```
+
+Comme pour `if/then/else`, il faut mettre le `:` pour démarrer le bloc
+
+???
+
+Donc là on a une liste de chiffres
+
+et on va parcourir tous les éléments de cette liste, un par un, du début à la fin
+
+à chaque tour de boucle, on travail sur un élément de la liste
+
+ici il y a 4 éléments donc il va y avoir 4 tours de boucle
+
+à chaque tour de boucle, l'élément sur lequel on travail est stocké dans la variable `chiffre`
+
+et on peut effectuer un traitement sur cet élément par le biais de la variable chiffre
+
+(ici on se contente seulement d'afficher l'élément)
+
+---
 
 2e exemple
 
@@ -1809,6 +1992,18 @@ ou directement
 for mot in ["bonjour", "merci", "byebye"]:
     mot_en_majuscule = mot.upper()
     print(mot_en_majuscule)
+```
+
+--
+
+3e exemple : avec `range()`
+
+```python
+print("La table de 3:")
+
+for n in range(10):
+    res = n * 3
+    print(n, "* 3", res)
 ```
 
 ---
@@ -1845,11 +2040,38 @@ for n1 in range(10):
 
 ### Boucles While
 
-...
+Qu'est-ce que c'est et à quoi ça sert ?
+* Exécuter certaines instructions tant qu'une condition n'est pas remplie
+
+Comment ça s'écrit ?
+
+```python
+while var:
+    # 1ère instruction executée si var est faux (ie si "var==False")
+    # 2e instruction executée si var est faux (ie si "var==False")
+    # 3e instruction executée si var est faux (ie si "var==False")
+    # ...
+```
+
+Dés que `var` devient vraie (`var == True`), on sort de la boucle
 
 ---
 
-Exemple
+1er exemple
+
+```python
+x = 0
+
+while x < 10:
+    print(x)
+    x = x+1
+
+print("Fini!")
+```
+
+---
+
+2e exemple
 
 ```python
 print("Quel est la capitale de l'Australie ?")
@@ -1886,6 +2108,8 @@ maintenant on va voir comment écrire une fonction
 * On peut lui communiquer des objets en entrée (arguments)
 
 * Elle peut retourner un résultat
+
+* Sert notamment à écrire une seule fois des bouts de codes souvent utilisés
 
 Exemple:
 
@@ -1969,13 +2193,192 @@ print(res_multiplication, res_addition)
 name: modules
 class: center, middle, inverse
 
-## Les modules
+## Les paquets et les modules
 
 ---
 
-### ...
+### Qu'est-ce que c'est ?
+
+Un logiciel ou une bibliothèque Python est généralement découpé en plusieurs
+fichier (.py) répartis dans plusieurs répertoires
+
+* Les *fichier* (.py) sont des *modules*
+* Les *répertoires* sont des *paquets* (en réalité c'est un peu plus compliqué que ça)
+
+---
+
+#### Exemple
+
+Les fichiers et répertoires du [projet VOR-012](https://github.com/volab/vor12/tree/master/vor12):
+
+```
+vor12
+├── actuator
+│   ├── dynamixel_ax12.py
+│   ├── fake.py
+│   └── __init__.py
+├── computer_vision
+│   ├── circle_detection.py
+│   └── __init__.py
+├── controller
+│   ├── __init__.py
+│   └── rule_based_controller.py
+└── __init__.py
+```
+
+`actuator`, `computer_vision` et `controller` sont 3 paquets du projet *VOR-012*
+
+Les fichier `.py` sont les modules du projet.
+
+---
+
+Intérêt du découpage en paquets et modules ?
+
+* Découper les gros projets en sous parties (comme les chapitres d'un livre)
+* Un fichier source de plusieurs centaines de lignes c'est pas agréable à lire/modifier
+* Découpage en sous-unités fonctionnelles (ex: VOR-012)
+* Il n'y a pas une bonne façon de découper son programme ou sa bibliothèque en
+  paquets et en modules
+    - C'est un choix totalement subjectif
+    - Savoir découper efficacement un projet en sous-unités fonctionnelles
+      cohérentes s'acquière avec l'expérience...
+
+---
+
+### Comment utiliser les paquets et les modules de la bibliothèque standard Python ?
+
+Avec l'instruction `import`
+
+1er exemple
+```python
+import math
+
+x = math.cos(1.5)
+print(x)
+```
+
+???
+
+nouveau module .red[point] nom de la fonction/classe/objet
+
+--
+
+2e exemple
+```python
+import random
+
+x = random.random()     # Retourne un nombre aléatoire entre 0 et 1
+print(x)
+```
+
+--
+
+Et n'oubliez pas la fonction `help()` !
+
+```python
+import math
+
+help(math)
+```
+
+---
+
+class: center, middle
+### Maintenant un nouveau monde s'ouvre à vous :-)
+
+[docs.python.org/3/library/index.html](https://docs.python.org/3/library/index.html)
+
+---
+
+### Et pour les bibliothèques externes installées ?
+
+Idem que pour la bibliothèque standard
+
+Exemple
+```python
+import numpy
+
+x = numpy.arange(10)
+print(x)
+```
+
+---
+
+class: center, middle
+
+## Exercices
+
+---
+
+Écrire un pierre/feuille/ciseau en Python où vous affronterez votre ordinateur!
+
+Utiliser la fonction `random.choice()` pour générer le choix de l'ordinateur
+
+Je vous laisse consulter la documentation en ligne (help, ou
+[docs.python.org/3/library/index.html](https://docs.python.org/3/library/index.html))
+pour découvrir comment utiliser `random.choice()`
+
+--
+
+```python
+import random
+
+choix_possibles = ["pierre", "feuille", "ciseaux"]
+
+choix_ordinateur = random.choice(choix_possibles)
+print(choix_ordinateur)
+```
+
+---
+
+```python
+import random
+
+choix_possibles = ["pierre", "feuille", "ciseaux"]
+
+choix_ordinateur = random.choice(choix_possibles)
+
+print('Faites votre choix ("pierre", "feuille" ou "ciseaux"):')
+choix_humain = input()
+
+if choix_humain not in choix_possibles:
+    print(choix_humain, "ne fait pas parti des choix possibles")
+else:
+    print("Choix de l'ordinateur:", choix_ordinateur)
+    print("Votre choix:", choix_humain)
+
+    if choix_humain == "pierre":
+        if choix_ordinateur == "pierre":
+            print("Égalité")
+        if choix_ordinateur == "feuille":
+            print("L'ordinateur a gagné")
+        if choix_ordinateur == "ciseaux":
+            print("Vous avez gagné")
+```
 
 ...
+
+---
+
+...
+
+```python
+    elif choix_humain == "feuille":
+        if choix_ordinateur == "pierre":
+            print("Vous avez gagné")
+        if choix_ordinateur == "feuille":
+            print("Égalité")
+        if choix_ordinateur == "ciseaux":
+            print("L'ordinateur a gagné")
+    else:
+        if choix_ordinateur == "pierre":
+            print("L'ordinateur a gagné")
+        if choix_ordinateur == "feuille":
+            print("Vous avez gagné")
+        if choix_ordinateur == "ciseaux":
+            print("Égalité")
+
+```
 
 ---
 
@@ -2725,11 +3128,19 @@ On ne va pas lire ça ici, je vous laisse le lire plus tard si vous le voulez...
 
 ---
 
-## Références
+class: center, middle
+
+## Licence: CC-BY-SA
+
+???
+
+.hidden[
+Références
 
 Partie "IDE":
 * http://enacit1.epfl.ch/introduction-python/outils-python.html
 * https://en.wikipedia.org/wiki/Python_%28programming_language%29#Implementations
 * https://docs.python.org/3.5/tutorial/interpreter.html
 * https://docs.python.org/3.5/using/windows.html
+]
 
