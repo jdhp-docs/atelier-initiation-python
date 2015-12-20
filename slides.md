@@ -1118,6 +1118,12 @@ Afficher le résultat d'une opération
 print(12 * 6)
 ```
 
+Afficher plusieurs valeurs
+
+```python
+print("resultat: ", 12 * 6)
+```
+
 Etc.
 
 ???
@@ -1702,6 +1708,70 @@ class: center, middle, inverse
 
 ...
 
+* Le bloc débute après une ligne qui se termine par `:`
+* Le bloc dure sur toute la partie indentée qui suit
+
+???
+
+Notion à expliquer:
+* les blocs avec l'indentation
+* le ":" à la fin de la première ligne
+
+---
+
+Exemple
+```python
+print("Quel est la capitale de l'Australie ?")
+reponse = input()
+
+if reponse != "Canberra":
+    print("Perdu!")
+```
+
+--
+
+Et avec `else`
+```python
+print("Quel est la capitale de l'Australie ?")
+reponse = input()
+
+if reponse != "Canberra":
+    print("Perdu!")
+else:
+    print("Bravo!")
+```
+
+---
+
+Les if/then/else imbriqués:
+
+```python
+print("Quel est ta note sur 20 ?")
+note = input()
+
+if note > 15:
+    print("Très bien!")
+else:
+    if note < 10:
+        print("Tu feras mieux la prochaine fois")
+    else:
+        print("Pas mal...")
+```
+
+Qu'on peut aussi écrire comme ça:
+
+```python
+print("Quel est ta note sur 20 ?")
+note = input()
+
+if note > 15:
+    print("Très bien!")
+elif note < 10:
+    print("Tu feras mieux la prochaine fois")
+else:
+    print("Pas mal...")
+```
+
 ---
 
 ### Boucles For
@@ -1712,9 +1782,85 @@ range()
 
 ---
 
+1er exemple
+
+```python
+print("La table de 3:")
+
+for n in range(10):
+    res = n * 3
+    print(n, "* 3", res)
+```
+
+--
+
+2e exemple
+
+```python
+liste_de_mots = ["bonjour", "merci", "byebye"]
+for mot in liste_de_mots:
+    mot_en_majuscule = mot.upper()
+    print(mot_en_majuscule)
+```
+
+ou directement
+
+```python
+for mot in ["bonjour", "merci", "byebye"]:
+    mot_en_majuscule = mot.upper()
+    print(mot_en_majuscule)
+```
+
+---
+
+Les boucles for imbriquées 
+
+```python
+print("La table de multiplication:")
+
+for n1 in range(10):
+    for n2 in range(10):
+        res = n1 * n2
+        print(res, end=" ")
+    print()
+```
+
+???
+
+Remarquez l'indentation des deux blocs
+
+
+En plus joli:
+```python
+print("La table de multiplication:")
+for n1 in range(10):
+    for n2 in range(10):
+        res = n1 * n2
+        res = "{:2d}".format(res)
+        print(res, end=" ")
+    print()
+```
+
+---
+
 ### Boucles While
 
 ...
+
+---
+
+Exemple
+
+```python
+print("Quel est la capitale de l'Australie ?")
+reponse = input()
+
+while reponse != "Canberra":
+    print("Perdu! Essaie encore")
+    reponse = input()
+
+print("Bravo!")
+```
 
 ---
 
@@ -1723,11 +1869,100 @@ class: center, middle, inverse
 
 ## Les fonctions
 
+???
+
+On a déjà vu comment utiliser les fonctions (print(), type(), etc.),
+
+maintenant on va voir comment écrire une fonction
+
 ---
 
-### ...
+### Rappel: c'est quoi une fonction ?
 
-...
+* Un nom suivi de parenthèses
+
+* Effectue des opérations
+
+* On peut lui communiquer des objets en entrée (arguments)
+
+* Elle peut retourner un résultat
+
+Exemple:
+
+```python
+foo()
+```
+
+```python
+x = "hello"
+bar(x)
+```
+
+```python
+x = baz(3)
+```
+
+---
+
+### Fonction sans argument et sans valeur de retour
+
+```python
+# Definition de la fonction
+def message():
+    print("Bonjour")
+    print("Comment ça va ?")
+
+# Appel de la fonction
+message()
+```
+
+Comme pour les structures de contrôle (if/then/else, for, while)
+* Le bloc débute après une ligne qui se termine par `:`
+* Le bloc dure sur toute la partie indentée qui suit
+
+---
+
+### Fonction avec un ou des arguments mais sans valeur de retour
+
+```python
+# Definition de la fonction
+def multiplication(n1, n2):
+    res = (n1 * n2)
+    print(res)
+
+# Appel de la fonction
+multiplication(3, 2)
+```
+
+---
+
+### Fonction avec un ou des arguments et une ou des valeurs de retour
+
+Exemple avec une valeur de retour
+```python
+# Definition de la fonction
+def multiplication(n1, n2):
+    return n1 * n2
+
+# Appel de la fonction
+res = multiplication(2, 3)
+
+print(res)
+```
+
+--
+
+Exemple avec deux valeurs de retour
+```python
+# Definition de la fonction
+def multiplication_et_addition(n1, n2):
+    return (n1 * n2, n1 + n2)
+
+# Appel de la fonction
+res_multiplication, res_addition = multiplication_et_addition(2, 3)
+
+print(res_multiplication, res_addition)
+```
 
 ---
 
@@ -2343,6 +2578,13 @@ class: center, middle, inverse
 
 ... avec des exemples concrets !
 
+???
+
+Pour vous montrer qu'en Python on peut faire des choses très intéressantes avec
+très peu de code
+
+Et pour vous faire patienter jusqu'au prochain atelier
+
 ---
 
 Télécharger mes *snippets* dans le répertoire "python" du projet [https://github.com/jeremiedecock/snippets](https://github.com/jeremiedecock/snippets)
@@ -2390,6 +2632,7 @@ TODO: mettre ça autre part
 ## Et après ?
 
 * Les autres structures de données: dictionnaires, ensembles, ...
+* La portée des variables et des objets
 * Les classes (POO)
 * Les exceptions
 * Approfondir les chaînes de caractères:
@@ -2401,20 +2644,20 @@ TODO: mettre ça autre part
 * Les structures de données imbriquées
 * Les slices (pour les séquences)
 * La programmation modulaire: écrire des paquets/modules
-* Les fonctions annonymes
+* Les fonctions anonymes
 * Les autres types: `bytes`, `bytearray`, `complex`, ...
 * L'opérateur `is`
+
+---
+
+## Sans oublier...
+
 * Les autre fonctions internes ("build-in functions")
     - `all()`, `any()`, `enumerate()`, `abs()`, `filter()`, `globals()`,
       `hex()`, `id()`, `isinstance()`, `iter()`, `locals()`, `map()`, `max()`,
       `min()`, `memoryview()`, `next()`, `pow()`, `property()`, `round()`,
       `slice()`, `sorted()`, `reversed()`, `staticmethod()`, `sum()`,
       `super()`, `vars()`, `zip()`, ...
-
----
-
-## Sans oublier...
-
 * Quelques modules de la bibliothèque standard
     - Mathématiques: `maths`
     - Temps: `date` et `time`
