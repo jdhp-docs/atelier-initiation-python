@@ -1670,7 +1670,7 @@ En toute rigueur, `range()` ne retourne pas une liste mais un *objet iterable*
 
 Vous pouvez plus ou moins l'utiliser comme une liste
 
-J'en dirai pas plus sur les objets iterables mais si vous vous voulez vraiment
+J'en dirai pas plus sur les objets iterables mais si vous voulez vraiment
 une liste à la place, vous pouvez écrire
 ```python
 l = list(range(10))
@@ -2200,9 +2200,9 @@ class: center, middle, inverse
 ### Qu'est-ce que c'est ?
 
 Un logiciel ou une bibliothèque Python est généralement découpé en plusieurs
-fichier (.py) répartis dans plusieurs répertoires
+fichiers (.py) répartis dans plusieurs répertoires
 
-* Les *fichier* (.py) sont des *modules*
+* Les *fichiers* (.py) sont des *modules*
 * Les *répertoires* sont des *paquets* (en réalité c'est un peu plus compliqué que ça)
 
 ---
@@ -2228,7 +2228,7 @@ vor12
 
 `actuator`, `computer_vision` et `controller` sont 3 paquets du projet *VOR-012*
 
-Les fichier `.py` sont les modules du projet.
+Les fichiers `.py` sont les modules du projet.
 
 ---
 
@@ -2990,11 +2990,39 @@ Et pour vous faire patienter jusqu'au prochain atelier
 
 ---
 
-Télécharger mes *snippets* dans le répertoire "python" du projet [https://github.com/jeremiedecock/snippets](https://github.com/jeremiedecock/snippets)
+class: center, middle, inverse
 
-Présentation des trucs cool (sans code) qu'on peut faire avec Python (distinguer les modules/paquets internes et externes)
+## Téléchargez mes *snippets* dans le répertoire "python" du projet [https://github.com/jeremiedecock/snippets](https://github.com/jeremiedecock/snippets)
 
-.left-column[
+---
+
+### Tracer des courbes avec Matplotlib
+
+---
+
+### Faire du traitement d'image avec Pillow
+
+---
+
+### La persistance de données avec JSON
+
+---
+
+### Dessiner avec Tkinter
+
+---
+
+### Capturer et traiter un flux vidéo avec OpenCV
+
+---
+
+### Parser une page HTML avec Beautifulsoup
+
+???
+
+.hidden[
+Présentation des trucs cool (sans code) qu'on peut faire avec Python
+(distinguer les modules/paquets internes et externes)
 * argparse
 * json
 * mayavi
@@ -3008,8 +3036,6 @@ Présentation des trucs cool (sans code) qu'on peut faire avec Python (distingue
 * sympy
 * raspberrypi...
 * xml...
-]
-.right-column[
 * scikitlearn
 * astropy ???
 * cairo
