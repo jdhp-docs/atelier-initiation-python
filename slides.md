@@ -2679,7 +2679,7 @@ for n in l:
 * La différence est toute aussi marquée (voir plus) pour les autres structures de
   données : dictionnaires, ensembles, etc.
 
-* Quand on sait que ce type de structures sont très utilisées dans la plupart des
+* Quand on sait que ces structures sont très utilisées dans la plupart des
   programmes, vous imaginez facilement l'impact sur la concision et la lisibilité
   du code... 
 
@@ -2701,7 +2701,7 @@ for n1 in l:
         print(n2)
 ```
 
-En C++ et en Java le code équivalant ne tiendrait tout juste sur ce slide...
+En C++ et en Java le code équivalant tiendrait tout juste sur ce slide...
 
 ???
 
@@ -2712,7 +2712,7 @@ On est bien content d'utiliser Python quand on a affaire à des structures imbri
 ### Un langage multi-plateforme
 
 Permet d'écrire des logiciels portables:
-* Pas besoin de créer une version spécifique de votre programme pour chaque systèmes d'exploitation
+* Pas besoin de créer une version spécifique de votre programme pour chaque système d'exploitation
 
 * Il marchera sans modification (à quelques rares exceptions près) sur:
     - Windows
@@ -2741,7 +2741,7 @@ Sans rien installer de plus que le Python standard vous pouvez déjà faire
 
 ---
 
-### Une énorme base de développeurs, d'utilisateurs et de bibliothèque externes
+### Une énorme base de développeurs, d'utilisateurs et de bibliothèques externes
 
 * Très utilisé dans l'industrie et le monde académique
     - Universités
@@ -2879,7 +2879,7 @@ http://jupyter.readthedocs.org/en/latest/subprojects.html
 ### Numpy, Matplotlib et SciPy
 
 À elles seules, ces trois bibliothèques étroitement liées et parfaitement
-intégrée à l'écosystème Python (IPython, Jupyter, etc.) peuvent suffire à
+intégrées à l'écosystème Python (IPython, Jupyter, etc.) peuvent suffire à
 convaincre beaucoup d'utilisateurs tant elles sont utiles et puissantes...
 
 Elles sont sans doute la principale raison du succès de Python chez les
@@ -2890,7 +2890,7 @@ combinée à la richesse d'un vrai langage généraliste... qui plus est libre e
 gratuit!
 
 Je ne connais aucun autre langage généraliste qui propose des bibliothèques
-aussi riche et bien intégrées pour le calcul scientifique.
+aussi riches et bien intégrées pour le calcul scientifique.
 
 ???
 
@@ -2933,7 +2933,7 @@ Python n'appartient à aucune entreprise
 
 Il est géré par la [Python Software Foundation (PSF)](https://www.python.org/psf/), une association à but non lucratif
 
-N'importe qui peut proposer des améliorations pour les futures version du langage via le mécanisme de [PEPs](https://www.python.org/dev/peps/)
+N'importe qui peut proposer des améliorations pour les futures versions du langage via le mécanisme de [PEPs](https://www.python.org/dev/peps/)
 
 ???
 
