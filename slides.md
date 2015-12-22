@@ -2892,6 +2892,56 @@ gratuit!
 Je ne connais aucun autre langage généraliste qui propose des bibliothèques
 aussi riches et bien intégrées pour le calcul scientifique.
 
+---
+
+.center[<img src="fig-nonfree/mpl1.png" width="500">]
+
+---
+
+.center[<img src="fig-nonfree/mpl2.png" width="500">]
+
+---
+
+.center[<img src="fig-nonfree/mpl3.png" width="500">]
+
+---
+
+.center[<img src="fig-nonfree/mpl4.png" width="500">]
+
+---
+
+.center[<img src="fig-nonfree/mpl5.png" width="500">]
+
+---
+
+.center[<img src="fig-nonfree/mpl6.png" width="500">]
+
+---
+
+.center[<img src="fig-nonfree/mpl7.png" width="500">]
+
+---
+
+.center[<img src="fig-nonfree/mpl8.png" width="500">]
+
+---
+
+.center[<img src="fig-nonfree/mpl9.png" width="500">]
+
+---
+
+.center[<img src="fig-nonfree/mpl10.png" width="500">]
+
+---
+
+.center[<img src="fig-nonfree/mpl11.png" width="500">]
+
+---
+
+.center[<img src="fig-nonfree/mpl13.png" width="500">]
+
+---
+
 ???
 
 Cet argument ne concerne pas seulement les scientifiques et les ingénieurs, tracer des graphs, etc. -> fablabs, finance, etc. (MsExcel)
