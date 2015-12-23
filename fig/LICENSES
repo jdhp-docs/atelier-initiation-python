@@ -13,3 +13,7 @@ environnement-python.png:
 - source: http://enacit1.epfl.ch/introduction-python/outils-python.html
 - owner: Jean-Daniel Bonjour
 - license: CC-BY-SA
+
+install_anaconda3_2.4.1_win64_step*.png:
+- owner: Jérémie Decock
+- license: CC-BY-SA
