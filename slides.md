@@ -9,7 +9,7 @@ class: center, middle, inverse
 Première partie
 
 .footnote[
-Jérémie Decock (www.jdhp.org)
+Jérémie Decock ([www.jdhp.org](http://www.jdhp.org))
 ]
 
 ---
@@ -3267,7 +3267,16 @@ On ne va pas lire ça ici, je vous laisse le lire plus tard si vous le voulez...
 
 class: center, middle
 
-## Licence: CC-BY-SA
+## Licence
+
+<br />
+
+.center[<a href="http://creativecommons.org/licenses/by-sa/4.0/"><img src="fig/cc_by_sa.svg" width="200"></a>]
+
+.licence[
+Ce document est mis à disposition selon les termes de la licence<br />
+[Creative Commons Attribution - Partage dans les Mêmes Conditions 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/)
+]
 
 ???
 
