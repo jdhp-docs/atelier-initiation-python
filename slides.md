@@ -2617,10 +2617,10 @@ int main() {
 
     list *pl, *pe1, *pe2, *pe3, *pe4;
 
-    list * pe1 = make_elem();
-    list * pe2 = make_elem();
-    list * pe3 = make_elem();
-    list * pe4 = make_elem();
+    pe1 = make_elem();
+    pe2 = make_elem();
+    pe3 = make_elem();
+    pe4 = make_elem();
 
     pe1->data = 2;
     pe2->data = 3;
