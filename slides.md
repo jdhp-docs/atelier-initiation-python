@@ -318,7 +318,7 @@ il faut savoir qu'il y a des problèmes d'incompatibilités entre certaines vers
 
 ### Python 2 ou Python 3 ?
 
-.center[<img src="fig-nonfree/python-survey-2014-versions-regularly-use.png" width="500">]
+.center[<img src="fig/python-survey-2014-versions-regularly-use.png" width="500">]
 
 .box[
 Python 2 est toujours utilisé par de nombreuses personnes !
@@ -341,7 +341,7 @@ utiliser Python 2 plutôt que Python 3.
 2. De nombreuses innovations de Python 3.X sont de toute façon portées dans Python 2.7
 3. Manque de temps, de moyens ou de motivation de porter certains projets
 
-.center[<img src="fig-nonfree/python-survey-2014-prevent-upgrade.png" width="500">]
+.center[<img src="fig/python-survey-2014-prevent-upgrade.png" width="500">]
 
 Source: [www.randalolson.com/2015/01/30/python-usage-survey-2014/](http://www.randalolson.com/2015/01/30/python-usage-survey-2014/)
 

@@ -15,5 +15,11 @@ environnement-python.png:
 - license: CC-BY-SA
 
 install_anaconda3_2.4.1_win64_step*.png:
-- owner: Jérémie Decock
-- license: CC-BY-SA
+- author: Jérémie Decock
+- license: Public Domain
+
+python-survey-2014-prevent-upgrade.png
+python-survey-2014-versions-regularly-use.png
+- author: Randy Olson
+- source: www.randalolson.com/2015/01/30/python-usage-survey-2014/
+
