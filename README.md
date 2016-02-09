@@ -1,4 +1,4 @@
-# Atelier initiation à la programmation Python. 
+# Atelier initiation à la programmation Python
 
 ## Prérequis
 
