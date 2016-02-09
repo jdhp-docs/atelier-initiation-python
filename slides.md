@@ -6,7 +6,7 @@ class: center, middle, inverse
 
 # Atelier d'initiation à la programmation Python
 
-Première partie
+Version 1.0
 
 .footnote[
 Jérémie Decock ([www.jdhp.org](http://www.jdhp.org))
