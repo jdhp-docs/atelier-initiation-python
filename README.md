@@ -23,6 +23,7 @@ d'approfondir rapidement vos connaissances en toute autonomie et de vous aider
 ## Plan
 
 1. Présentation du langage Python (histoire et particularités)
+    - Bref aperçu de ce qu'on peut faire avec Python (sans se préoccuper du code source)
 2. Présentation de l'environnement de programmation Python
 3. Variables et types de base
 4. Quelques fonctions utiles (print, help, dir)
@@ -30,11 +31,12 @@ d'approfondir rapidement vos connaissances en toute autonomie et de vous aider
 6. Les structures de données (listes, dictionnaire, ensembles, le "slicing")
 7. Les structures de contrôle (if/then/else, boucles for et boucles while)
 8. Les fonctions
+9. Les modules
+10. Pour finir, quelques exemples de scripts bien utiles...
 
 En fonction du temps disponible et de la demande:
 
 - Les fichiers
-- Les modules
 - Quelques notions de base de la POO (Programmation Orientée Objet)
 - Quelques astuces (les "list comprehensions", ...) 
 
