@@ -4,8 +4,8 @@ Atelier d'initiation à la programmation Python
 
 Copyright (c) 2016 Jérémie DECOCK (www.jdhp.org)
 
-* Read online: http://www.jdhp.org/docs/atelier_initiation_python_part1/atelier_initiation_python_part1.html
-* PDF version: http://www.jdhp.org/dl/pdf/atelier_initiation_python_part1.pdf
+* Read online: http://www.jdhp.org/docs/atelier_initiation_python_part1/main.html
+* Abstract on JDHP: http://www.jdhp.org/documentation_fr.html#atelier_initiation_python_part1
 * Source code: https://github.com/jdhp-docs/atelier-initiation-python
 
 Prérequis
