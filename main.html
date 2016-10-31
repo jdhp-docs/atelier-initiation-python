@@ -198,10 +198,28 @@
         <script src="http://remarkjs.com/downloads/remark-latest.min.js"> </script>
         <!-- Offline version : <script src="remark.js"> </script> -->
 
+        <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&delayStartupUntil=configured" type="text/javascript"></script>
+
         <script>
             var slideshow = remark.create({
                 sourceUrl: 'content/main.md'
             });
+
+            // Setup MathJax //////////////////////////////////////////////////
+
+            MathJax.Hub.Config({
+                tex2jax: {
+                    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+                }
+            });
+
+            MathJax.Hub.Queue(function() {
+                $(MathJax.Hub.getAllJax()).map(function(index, elem) {
+                    return(elem.SourceElement());
+                }).parent().addClass('has-jax');
+            });
+
+            MathJax.Hub.Configured();
         </script>
     </body>
 </html>
