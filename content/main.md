@@ -16,26 +16,25 @@ TODO_AUTHOR_NAME ([TODO_AUTHOR_WEB_SITE](http://TODO_AUTHOR_WEB_SITE))
 
 layout: false
 
-## Slide title
+## Titre
 
-content...
+Contenu...
 
 ???
 
-notes...
+Notes...
 
 ---
 
 class: center, middle
 
-## License
+## Licence
 
 <br />
 
 .center[<a href="http://creativecommons.org/licenses/by-sa/4.0/"><img src="figs/logos/cc/cc_by_sa.svg" width="200"></a>]
 
 .licence[
-This document is provided under the terms and conditions of the<br />
+Ce document est mis à disposition selon les termes de la licence<br />
 [Creative Commons 4.0 (CC BY-SA 4.0)](http://creativecommons.org/licenses/by-sa/4.0/)
-license.
 ]
