@@ -29,6 +29,7 @@ TODO_DOCUMENT_PDF_URL="http://www.jdhp.org/dl/pdf/${TODO_DOCUMENT_FILE_BASE_NAME
 
 TODO_HTML_TMP_DIR="html_tmp"
 
+
 # SETUP GIT ###################################################################
 
 git remote rename origin skeleton
@@ -57,7 +58,7 @@ sed -i "" \
     -e "s/TODO_DOCUMENT_GITHUB_REPOSITORY_NAME/${TODO_DOCUMENT_GITHUB_REPOSITORY_NAME}/g" \
     -e "s TODO_DOCUMENT_GITHUB_URL ${TODO_DOCUMENT_GITHUB_URL} g" \
     -e "s TODO_DOCUMENT_ISSUE_TRACKER_URL ${TODO_DOCUMENT_ISSUE_TRACKER_URL} g" \
-    AUTHORS meta.make README.rst content/main.md
+    AUTHORS meta.make README.rst content/main.md .gitignore
 
 
 # FIX TITLES UNDERLINE LENGTH IN RESTRUCTUREDTEXT FILES #######################
