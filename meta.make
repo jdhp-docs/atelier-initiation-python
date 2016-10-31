@@ -1,0 +1,2 @@
+FILE_BASE_NAME=atelier_initiation_python_part1
+HTML_TMP_DIR=html_tmp

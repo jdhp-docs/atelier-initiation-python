@@ -147,7 +147,7 @@ Histoire et particularités
 * Open source
 * Très utilisé dans l'industrie et le monde académique
 
-.center[<img src="fig/python_logo.svg" width="300">]
+.center[<img src="figs/python_logo.svg" width="300">]
 
 .box[
 .center[Site web: [www.python.org](http://www.python.org)]
@@ -318,7 +318,7 @@ il faut savoir qu'il y a des problèmes d'incompatibilités entre certaines vers
 
 ### Python 2 ou Python 3 ?
 
-.center[<img src="fig/python-survey-2014-versions-regularly-use.png" width="500">]
+.center[<img src="figs/python-survey-2014-versions-regularly-use.png" width="500">]
 
 .box[
 Python 2 est toujours utilisé par de nombreuses personnes !
@@ -341,7 +341,7 @@ utiliser Python 2 plutôt que Python 3.
 2. De nombreuses innovations de Python 3.X sont de toute façon portées dans Python 2.7
 3. Manque de temps, de moyens ou de motivation de porter certains projets
 
-.center[<img src="fig/python-survey-2014-prevent-upgrade.png" width="500">]
+.center[<img src="figs/python-survey-2014-prevent-upgrade.png" width="500">]
 
 Source: [www.randalolson.com/2015/01/30/python-usage-survey-2014/](http://www.randalolson.com/2015/01/30/python-usage-survey-2014/)
 
@@ -575,7 +575,7 @@ Anaconda et Miniconda contiennent:
 * L'application .red[Jupyter] pour créer et utiliser des *notebooks*
 * Les éditeurs .red[Spyder], .red[Sublime Text 2] et .red[PyCharm]
 
-.center[<img src="fig/environnement-python.png" width="500">]
+.center[<img src="figs/environnement-python.png" width="500">]
 
 ---
 
@@ -2516,7 +2516,7 @@ Par exemple, une liste chainée (tableau dynamique):
 
 <br />
 
-.center[<img src="fig-nonfree/liste.jpg" width="500">]
+.center[<img src="figs/nonfree/liste.jpg" width="500">]
 
 ???
 
@@ -2894,51 +2894,51 @@ aussi riches et bien intégrées pour le calcul scientifique.
 
 ---
 
-.center[<img src="fig-nonfree/mpl1.png" width="500">]
+.center[<img src="figs/nonfree/mpl1.png" width="500">]
 
 ---
 
-.center[<img src="fig-nonfree/mpl2.png" width="500">]
+.center[<img src="figs/nonfree/mpl2.png" width="500">]
 
 ---
 
-.center[<img src="fig-nonfree/mpl3.png" width="500">]
+.center[<img src="figs/nonfree/mpl3.png" width="500">]
 
 ---
 
-.center[<img src="fig-nonfree/mpl4.png" width="500">]
+.center[<img src="figs/nonfree/mpl4.png" width="500">]
 
 ---
 
-.center[<img src="fig-nonfree/mpl5.png" width="500">]
+.center[<img src="figs/nonfree/mpl5.png" width="500">]
 
 ---
 
-.center[<img src="fig-nonfree/mpl6.png" width="500">]
+.center[<img src="figs/nonfree/mpl6.png" width="500">]
 
 ---
 
-.center[<img src="fig-nonfree/mpl7.png" width="500">]
+.center[<img src="figs/nonfree/mpl7.png" width="500">]
 
 ---
 
-.center[<img src="fig-nonfree/mpl8.png" width="500">]
+.center[<img src="figs/nonfree/mpl8.png" width="500">]
 
 ---
 
-.center[<img src="fig-nonfree/mpl9.png" width="500">]
+.center[<img src="figs/nonfree/mpl9.png" width="500">]
 
 ---
 
-.center[<img src="fig-nonfree/mpl10.png" width="500">]
+.center[<img src="figs/nonfree/mpl10.png" width="500">]
 
 ---
 
-.center[<img src="fig-nonfree/mpl11.png" width="500">]
+.center[<img src="figs/nonfree/mpl11.png" width="500">]
 
 ---
 
-.center[<img src="fig-nonfree/mpl13.png" width="500">]
+.center[<img src="figs/nonfree/mpl13.png" width="500">]
 
 ---
 
@@ -3056,7 +3056,7 @@ Montrer un exemple de code documenté et le résultat sur sphinx
 ---
 
 Cf. [PyGamma15](https://github.com/gammapy/PyGamma15/blob/gh-pages/talks/ctapipe/pygamma15-cta-data-processing.pdf)
-.center[<img src="fig-nonfree/speed.png" width="800">]
+.center[<img src="figs/nonfree/speed.png" width="800">]
 
 ---
 
@@ -3271,7 +3271,7 @@ class: center, middle
 
 <br />
 
-.center[<a href="http://creativecommons.org/licenses/by-sa/4.0/"><img src="fig/cc_by_sa.svg" width="200"></a>]
+.center[<a href="http://creativecommons.org/licenses/by-sa/4.0/"><img src="figs/logos/cc/cc_by_sa.svg" width="200"></a>]
 
 .licence[
 Ce document est mis à disposition selon les termes de la licence<br />

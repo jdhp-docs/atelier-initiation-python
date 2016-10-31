@@ -1,0 +1,6 @@
+[submodule "remark"]
+	path = remark
+	url = https://github.com/gnab/remark.git
+[submodule "figs/logos"]
+	path = figs/logos
+	url = git@github.com:jdhp-misc/logos.git
